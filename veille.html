@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Veille - Enzo Pace</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="Portfolio/personnage/favicion.png"
+    />
+    <link rel="stylesheet" href="Portfolio/style-sheet/veille.css" />
+    <link rel="stylesheet" href="Portfolio/style-sheet/scroll-to-top.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- En-tête de la page avec le menu de navigation -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="image-entete">
+            <img
+              src="Portfolio/personnage/personnage-soleil-sans-fond/DAD42A_1-removebg-preview.png"
+              alt="Illustration décorative"
+            />
+          </div>
+          <h1>Enzo Pace - Portfolio</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
+          </ul>
+        </nav>
+        <div class="theme-container">
+          <button id="toggleNightMode" class="theme-toggle">
+            <span class="icon">🌞</span>
+          </button>
+        </div>
+        <div class="contact-button-container">
+          <button
+            id="openContactModal"
+            class="contact-button"
+            aria-label="Ouvrir le formulaire de contact"
+          >
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+      <div class="content">
+        <h2>
+          L'évolution du monde de la musique avec l'intelligence artificielle
+        </h2>
+
+        <div class="sorting">
+          <button id="sortByDate">Trier par Date</button>
+          <button id="sortByNote">Trier par Note</button>
+        </div>
+
+        <!-- Conteneur des articles de veille -->
+        <div class="articles-container">
+          <!-- Article 1 -->
+          <section class="article" data-date="2024-02-01" data-note="4">
+            <div>
+              <h3>
+                Musique et intelligence artificielle : liaisons heureuses ou
+                dangereuses ?
+              </h3>
+              <img
+                src="Portfolio/picture/article1.webp"
+                alt="Aperçu de l'article 1"
+                class="article-image"
+              />
+              <div class="detail-article">
+                <p><strong>Date :</strong> 1 février 2024</p>
+                <p><strong>Note :</strong> ★★★★☆</p>
+                <p><strong>Source :</strong> France Musique</p>
+              </div>
+              <div class="buttons">
+                <button type="button" class="toggle-detail">
+                  Voir Détails
+                </button>
+                <button
+                  type="button"
+                  class="view-link"
+                  data-url="https://www.radiofrance.fr/francemusique/podcasts/reportage/musique-et-intelligence-artificielle-liaisons-heureuses-ou-dangereuses-9898327"
+                >
+                  Aller à l'Article
+                </button>
+              </div>
+              <p class="article-detail" style="display: none">
+                Cet article de France Musique explore comment l'intelligence
+                artificielle bouleverse le secteur musical, avec des logiciels
+                de plus en plus performants qui créent de la musique sans
+                intervention humaine
+              </p>
+            </div>
+          </section>
+
+          <!-- Article 2 -->
+          <section class="article" data-date="2024-09-04" data-note="4.5">
+            <div>
+              <h3>
+                L'intelligence artificielle dans la musique et sa révolution
+              </h3>
+              <img
+                src="Portfolio/picture/article2.webp"
+                alt="Aperçu de l'article 2"
+                class="article-image"
+              />
+              <div class="detail-article">
+                <p><strong>Date :</strong> 4 septembre 2024</p>
+                <p><strong>Note :</strong> ★★★★☆</p>
+                <p><strong>Source :</strong> Sono Vente</p>
+              </div>
+              <div class="buttons">
+                <button type="button" class="toggle-detail">
+                  Voir Détails
+                </button>
+                <button
+                  type="button"
+                  class="view-link"
+                  data-url="https://www.sonovente.com/guides/intelligence-articielle-dans-la-musique-et-sa-revolution.html"
+                >
+                  Aller à l'Article
+                </button>
+              </div>
+              <p class="article-detail" style="display: none">
+                Sono Vente présente les différentes applications de l'IA dans la
+                musique, ses avantages, ses limites et les enjeux éthiques
+                associés
+              </p>
+            </div>
+          </section>
+
+          <!-- Article 3 -->
+          <section class="article" data-date="2024-04-03" data-note="5">
+            <div>
+              <h3>
+                La Musique et la Technologie : L’Impact des IA sur la Création
+                Musicale
+              </h3>
+              <img
+                src="Portfolio/picture/article3.webp"
+                alt="Aperçu de l'article 3"
+                class="article-image"
+              />
+              <div class="detail-article">
+                <p><strong>Date :</strong> 3 avril 2024</p>
+                <p><strong>Note :</strong> ★★★★★</p>
+                <p><strong>Source :</strong> Ziked</p>
+              </div>
+              <div class="buttons">
+                <button type="button" class="toggle-detail">
+                  Voir Détails
+                </button>
+                <button
+                  type="button"
+                  class="view-link"
+                  data-url="https://ziked.fr/la-musique-et-la-technologie-limpact-des-ia-sur-la-creation-musicale/"
+                >
+                  Aller à l'Article
+                </button>
+              </div>
+              <p class="article-detail" style="display: none">
+                Ce rapport souligne le taux élevé d'attaques par ransomware en
+                France en 2024, explorant les raisons derrière cette
+                augmentation et les secteurs les plus touchés.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <!-- Section Contact -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:enzopropace@gmail.com">enzopropace@gmail.com</a>
+          </p>
+          <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
+          <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+        </div>
+
+        <!-- Section Liens Rapides -->
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
+          </ul>
+        </div>
+
+        <!-- Section Réseaux Sociaux -->
+        <div class="footer-social">
+          <h3>Réseaux Sociaux</h3>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank">
+              <img
+                src="Portfolio/picture/logo-linkedin-noir.jpg"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
+              target="_blank"
+            >
+              <img
+                src="Portfolio/picture/logo-instagram-noir-png.jpg"
+                alt="Instagram"
+              />
+            </a>
+            <a href="https://github.com/enzopc05" target="_blank">
+              <img
+                src="Portfolio/picture/githublogo-removebg-preview.png"
+                alt="GitHub"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Section Copyright -->
+        <div class="footer-bottom">
+          <p>© Enzo Pace 2024 | Tous droits réservés</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modale de contact -->
+    <div id="contactModal" class="modal contact-modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close">&times;</span>
+        <h2>Contactez-moi</h2>
+        <form action="https://formspree.io/f/xnnjklvn" method="POST">
+          <div class="form-group">
+            <label for="email">Votre adresse email</label>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              placeholder="Votre adresse email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Votre message"
+              required
+            ></textarea>
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouveau message depuis le portfolio"
+          />
+          <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="Portfolio/dev-sheet/scroll-to-top.js"></script>
+    <script src="Portfolio/dev-sheet/veille.js"></script>
+  </body>
+</html>

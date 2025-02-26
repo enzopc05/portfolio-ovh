@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio - Enzo Pace</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="Portfolio/personnage/favicion.png"
+    />
+    <link rel="stylesheet" href="Portfolio/style-sheet/accueil.css" />
+    <link rel="stylesheet" href="Portfolio/style-sheet/scroll-to-top.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="image-entete">
+            <img
+              src="Portfolio/personnage/personnage-soleil-sans-fond/DAD42A_1-removebg-preview.png"
+              alt="Illustration décorative"
+            />
+          </div>
+          <h1>Enzo Pace - Portfolio</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan">Bilan</a></li>
+          </ul>
+        </nav>
+        <div class="theme-container">
+          <button id="toggleNightMode" class="theme-toggle">
+            <span class="icon">🌞</span>
+          </button>
+        </div>
+        <div class="contact-button-container">
+          <button
+            id="openContactModal"
+            class="contact-button"
+            aria-label="Ouvrir le formulaire de contact"
+          >
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- À propos de moi -->
+        <section id="about" class="about-me">
+          <div>
+            <h2>À propos de moi</h2>
+            <p>
+              Je m'appelle <strong>Enzo Pace</strong>, étudiant en
+              <strong
+                >BTS Systèmes Informatiques aux Organisations (SLAM)</strong
+              >. Passionné par le développement logiciel et les nouvelles
+              technologies, je développe des compétences en programmation,
+              gestion de projet IT, et travail d'équipe.
+            </p>
+
+            <!-- Bouton de téléchargement du CV -->
+            <a
+              href="Portfolio/doc/CV_Enzo_Pace2024_fr.pdf"
+              class="btn-cv"
+              download="CV_Enzo_Pace2024.pdf"
+              id="cv-download"
+              data-i18n="home.download_cv"
+            >
+              Télécharger mon CV
+            </a>
+          </div>
+          <img
+            src="Portfolio/picture/photo2moi.jpg"
+            alt="Photo de Enzo"
+            class="profile-photo"
+          />
+        </section>
+
+        <!-- Frise chronologique -->
+        <section id="timeline-section">
+          <ul class="timeline">
+            <li style="--accent-color: #b67332" id="bts-tl">
+              <div class="date">2023 - 2025</div>
+              <div class="title">BTS SIO SLAM</div>
+              <div class="descr">Cliquez pour plus d'informations.</div>
+            </li>
+            <li style="--accent-color: #daab3a" id="eurodislog-tl">
+              <div class="date">2024 - Aujourd'hui</div>
+              <div class="title">Eurodislog</div>
+              <div class="descr">Cliquez pour plus d'informations.</div>
+            </li>
+            <li style="--accent-color: #e24a68" id="remax-tl">
+              <div class="date">2023 - 2024</div>
+              <div class="title">RE/MAX France</div>
+              <div class="descr">Cliquez pour plus d'informations.</div>
+            </li>
+            <li style="--accent-color: #4cadad" id="bac-tl">
+              <div class="date">2021 - 2023</div>
+              <div class="title">Baccalauréat STI2D</div>
+              <div class="descr">Cliquez pour plus d'informations.</div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="credits">
+          <a
+            target="_blank"
+            href="https://www.freepik.com/free-vector/infographic-template-with-yearly-info_1252895.htm"
+            >inspired by</a
+          >
+        </div>
+
+        <!-- Compétences Techniques -->
+        <section id="skills">
+          <h2>Langages</h2>
+          <div class="skills-container">
+            <div class="skill">
+              <i class="devicon-python-plain colored"></i>
+              <p>Python</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-javascript-plain colored"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-java-plain colored"></i>
+              <p>Java</p>
+            </div>
+            <div class="skill">
+              <!-- VBA n'est pas dans Devicon, on garde l'image -->
+              <img
+                src="Portfolio/picture/vbalogo-removebg-preview.png"
+                alt="VBA Logo"
+              />
+              <p>VBA</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-csharp-plain colored"></i>
+              <p>C#</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-php-plain colored"></i>
+              <p>PHP</p>
+            </div>
+            <div class="skill">
+              <!-- JavaFX n'est pas dans Devicon, on garde l'image -->
+              <img
+                src="Portfolio/picture/jfxlogopad1-removebg-preview.png"
+                alt="JFX Logo"
+              />
+              <p>JavaFX</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Outils Utilisés -->
+        <section id="tools">
+          <h2>Outils</h2>
+          <div class="tools-container">
+            <div class="tool">
+              <i class="devicon-vscode-plain colored"></i>
+              <p>VS Code</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-intellij-plain colored"></i>
+              <p>IntelliJ IDEA</p>
+            </div>
+            <div class="tool">
+              <img
+                src="Portfolio/picture/WAMPlogo-removebg-preview.png"
+                alt="WAMP Logo"
+              />
+              <p>WAMP</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-github-original colored"></i>
+              <p>GitHub</p>
+            </div>
+            <div class="tool">
+              <!-- Notion n'est pas dans Devicon, on garde l'image -->
+              <img src="Portfolio/picture/notionlogo.png" alt="Notion Logo" />
+              <p>Notion</p>
+            </div>
+            <div class="tool">
+              <!-- VB6 n'est pas dans Devicon, on garde l'image -->
+              <img
+                src="Portfolio/picture/vb6-removebg-preview.png"
+                alt="VB6 Logo"
+              />
+              <p>VB6</p>
+            </div>
+            <div class="tool">
+              <!-- XML n'est pas dans Devicon, on garde l'image -->
+              <img
+                src="Portfolio/picture/xmllogo-removebg-preview.png"
+                alt="XML Logo"
+              />
+              <p>XML</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-mysql-plain colored"></i>
+              <p>SQL</p>
+            </div>
+            <div class="tool">
+              <!-- Vérifiez si cette classe existe, sinon gardez l'image -->
+              <img
+                src="Portfolio/picture/postman-removebg-preview.png"
+                alt="PostMan Logo"
+              />
+              <p>PostMan</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <!-- Section Contact -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:enzopropace@gmail.com">enzopropace@gmail.com</a>
+          </p>
+          <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
+          <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+        </div>
+
+        <!-- Section Liens Rapides -->
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
+          </ul>
+        </div>
+
+        <!-- Section Réseaux Sociaux -->
+        <div class="footer-social">
+          <h3>Réseaux Sociaux</h3>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank">
+              <img
+                src="Portfolio/picture/logo-linkedin-noir.jpg"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
+              target="_blank"
+            >
+              <img
+                src="Portfolio/picture/logo-instagram-noir-png.jpg"
+                alt="Instagram"
+              />
+            </a>
+            <a href="https://github.com/enzopc05" target="_blank">
+              <img
+                src="Portfolio/picture/githublogo-removebg-preview.png"
+                alt="GitHub"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- Section Copyright -->
+        <div class="footer-bottom">
+          <p>© Enzo Pace 2024 | Tous droits réservés</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Pop-ups -->
+    <div id="modal-bts" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails sur le BTS SIO SLAM</h2>
+        <p>
+          <span class="description"
+            >Le BTS SIO SLAM est une formation en informatique dédiée au
+            développement logiciel et aux solutions métiers. Il prépare les
+            étudiants à concevoir, développer et maintenir des applications
+            informatiques adaptées aux besoins des entreprises.</span
+          >
+        </p>
+
+        <p class="details">
+          <span class="subheading"
+            >Cette formation, répartie sur deux ans, propose une alternance
+            entre cours théoriques et projets pratiques, permettant d'acquérir
+            des compétences solides dans les domaines suivants :</span
+          >
+        </p>
+
+        <ul class="skills-list">
+          <li>
+            <strong>Programmation :</strong> Python, Java, JavaScript, etc.
+          </li>
+          <li><strong>Développement web :</strong> HTML, CSS, PHP, SQL.</li>
+          <li>
+            <strong>Gestion de projets informatiques :</strong> méthodologies
+            agiles, cycles en V.
+          </li>
+          <li>
+            <strong>Sécurité informatique :</strong> administration des systèmes
+            et principes de cybersécurité.
+          </li>
+        </ul>
+
+        <p class="details">
+          <span class="closing">
+            Grâce à des projets variés, le BTS SLAM développe des compétences en
+            analyse, en conception et en gestion des solutions logicielles,
+            ouvrant ainsi de nombreuses opportunités professionnelles dans le
+            domaine IT.
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-remax" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails sur RE/MAX France</h2>
+        <p>
+          Fondée en <strong>1973</strong> aux États-Unis,
+          <strong>RE/MAX</strong> (Real Estate Maximum) est aujourd’hui un
+          réseau immobilier international de premier plan, présent dans plus de
+          <strong>110 pays</strong>. Depuis son arrivée en France, RE/MAX s’est
+          imposée comme un acteur majeur du secteur immobilier, avec une
+          approche centrée sur l’innovation et la performance.
+        </p>
+
+        <h3>Les valeurs de RE/MAX France</h3>
+        <p>
+          Chez RE/MAX France, l’objectif est de transformer l’expérience
+          immobilière grâce à :
+        </p>
+        <ul>
+          <li>
+            <strong>L’expertise des agents :</strong> un réseau de
+            professionnels expérimentés et régulièrement formés pour répondre
+            aux besoins spécifiques de chaque client.
+          </li>
+          <li>
+            <strong>L’innovation technologique :</strong> des outils performants
+            pour faciliter les transactions, optimiser la visibilité des biens,
+            et offrir un service personnalisé.
+          </li>
+          <li>
+            <strong>La collaboration :</strong> une culture d’entreprise forte
+            qui valorise le travail d’équipe et les partenariats.
+          </li>
+        </ul>
+
+        <h3>Mon rôle chez RE/MAX France</h3>
+        <p>
+          Durant mon alternance au sein de RE/MAX France, j’ai eu l’opportunité
+          de contribuer à divers projets en tant qu’assistant chef de projet IT,
+          notamment :
+        </p>
+        <ul>
+          <li>
+            <strong>Support informatique</strong> auprès des franchises du
+            réseau.
+          </li>
+          <li>
+            <strong>Gestion des flux XML</strong>, permettant d’assurer un
+            échange fluide d’informations entre les plateformes.
+          </li>
+          <li>
+            <strong>Analyse et correction de bugs</strong> sur le CRM,
+            garantissant une expérience utilisateur optimale.
+          </li>
+        </ul>
+
+        <h3>Une expérience formatrice</h3>
+        <p>
+          Cette expérience m’a permis de développer mes compétences en gestion
+          de projet informatique, en résolution de problèmes techniques, et en
+          communication avec différents acteurs du réseau. Travailler dans un
+          environnement innovant et dynamique comme celui de RE/MAX France a
+          également renforcé mon adaptabilité et ma capacité à travailler en
+          équipe.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-eurodislog" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails sur Eurodislog</h2>
+        <p class="eurodislog-paragraph">
+          <strong>Eurodislog</strong> est une entreprise spécialisée dans la
+          logistique et les services d’approvisionnement. Elle accompagne ses
+          clients en leur proposant des solutions innovantes pour optimiser
+          leurs chaînes d’approvisionnement et améliorer leur efficacité
+          opérationnelle. Grâce à son expertise, Eurodislog se positionne comme
+          un acteur incontournable dans son secteur.
+        </p>
+
+        <h3 class="eurodislog-subtitle">Les forces d'Eurodislog</h3>
+        <p class="eurodislog-paragraph">Eurodislog se distingue par :</p>
+        <ul class="eurodislog-list">
+          <li>
+            <strong>Une intégration technologique avancée :</strong> utilisation
+            d'API et de solutions informatiques pour automatiser et optimiser
+            les processus logistiques.
+          </li>
+          <li>
+            <strong>Une expertise métier :</strong> une compréhension
+            approfondie des besoins spécifiques des entreprises en matière de
+            chaîne d'approvisionnement.
+          </li>
+          <li>
+            <strong>Une innovation constante :</strong> des outils et solutions
+            adaptés aux enjeux modernes de la logistique.
+          </li>
+        </ul>
+
+        <h3 class="eurodislog-subtitle">Mon rôle chez Eurodislog</h3>
+        <p class="eurodislog-paragraph">
+          En tant qu’alternant chez Eurodislog, je suis principalement impliqué
+          dans des projets de développement informatique, notamment :
+        </p>
+        <ul class="eurodislog-list">
+          <li>
+            <strong>Développement d’API :</strong> création et gestion
+            d’interfaces de communication pour échanger des données avec les
+            partenaires et clients.
+          </li>
+          <li>
+            <strong>Programmation en VB6 :</strong> mise en place d’alertes et
+            automatisations pour améliorer les processus opérationnels.
+          </li>
+          <li>
+            <strong>Création de macros Excel :</strong> optimisation des tâches
+            administratives à l’aide de macros en VBA.
+          </li>
+        </ul>
+
+        <h3 class="eurodislog-subtitle">Une expérience formatrice</h3>
+        <p class="eurodislog-paragraph">
+          Mon expérience chez Eurodislog m’a permis de renforcer mes compétences
+          en développement logiciel, en programmation d'API, et en gestion de
+          projets techniques. Travailler dans cet environnement dynamique m’a
+          également donné une vision claire des défis et des opportunités liés à
+          la modernisation des processus logistiques.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-bac" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails sur le Baccalauréat STI2D</h2>
+        <p class="bac-paragraph">
+          Le <strong>Baccalauréat STI2D</strong> (Sciences et Technologies de
+          l’Industrie et du Développement Durable) est une formation qui allie
+          technologie, sciences de l’ingénieur et développement durable.
+          L’option <strong>SIN</strong> (Systèmes d’Information et Numérique)
+          met l’accent sur les technologies numériques et les systèmes
+          d’information.
+        </p>
+
+        <h3 class="bac-subtitle">Les points forts de la filière</h3>
+        <p class="bac-paragraph">Cette option forme les étudiants à :</p>
+        <ul class="bac-list">
+          <li>
+            <strong>Programmation :</strong> initiation à des langages comme le
+            C, Arduino, et Python.
+          </li>
+          <li>
+            <strong>Systèmes embarqués :</strong> étude et mise en œuvre de
+            systèmes électroniques interconnectés.
+          </li>
+          <li>
+            <strong>Création et gestion de projets numériques :</strong>
+            conception de prototypes, développement de solutions numériques
+            adaptées.
+          </li>
+          <li>
+            <strong>Communication de données :</strong> exploration des
+            protocoles de transmission comme le Bluetooth et le Wi-Fi.
+          </li>
+        </ul>
+
+        <h3 class="bac-subtitle">Les projets réalisés</h3>
+        <p class="bac-paragraph">
+          Durant cette formation, j’ai participé à plusieurs projets pratiques
+          qui m’ont permis d’appliquer les notions théoriques, notamment :
+        </p>
+        <ul class="bac-list">
+          <li>
+            <strong>Conception de pages web :</strong> création de sites en HTML
+            et CSS.
+          </li>
+          <li>
+            <strong>Développement de systèmes interactifs :</strong>
+            programmation et contrôle de dispositifs avec Arduino.
+          </li>
+          <li>
+            <strong>Résolution de problématiques techniques :</strong> étude et
+            optimisation de systèmes électroniques pour des cas concrets.
+          </li>
+        </ul>
+
+        <h3 class="bac-subtitle">Un tremplin vers l’avenir</h3>
+        <p class="bac-paragraph">
+          Cette formation m’a permis de découvrir et de développer une passion
+          pour les technologies numériques et l’ingénierie. Elle a constitué une
+          base solide pour mes études supérieures en informatique et mes projets
+          professionnels.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modale de contact -->
+    <div id="contactModal" class="modal contact-modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close">&times;</span>
+        <h2>Contactez-moi</h2>
+        <form action="https://formspree.io/f/xnnjklvn" method="POST">
+          <div class="form-group">
+            <label for="email">Votre adresse email</label>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              placeholder="Votre adresse email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Votre message"
+              required
+            ></textarea>
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouveau message depuis le portfolio"
+          />
+          <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="Portfolio/dev-sheet/scroll-to-top.js"></script>
+    <script src="Portfolio/dev-sheet/accueil.js"></script>
+  </body>
+</html>
