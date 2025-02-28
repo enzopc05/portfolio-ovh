@@ -111,6 +111,18 @@
               <p>Logiciel de ticketing sur le thème des trains</p>
               <button class="btn" data-modal="modal2">En savoir plus</button>
             </article>
+            <article class="project" data-tech="python html css javascript">
+              <h3>JO Ticket</h3>
+              <div class="project-image-container">
+                <img alt="Image du projet école 3" src="Portfolio/picture/" />
+              </div>
+              <p>
+                Création d'une application d'administration qui gère les matchs,
+                une mobile qui permet aux utilisateurs d'acheter des tickets et
+                une qui permet de scanner les QR code sur les tickets.
+              </p>
+              <button class="btn" data-modal="modal6">En savoir plus</button>
+            </article>
           </div>
         </section>
         <!-- Réalisations Entreprise -->
@@ -275,38 +287,112 @@
               <i class="devicon-java-plain colored language-logo"></i>
             </div>
           </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="Portfolio/picture/horlogelogo-removebg-preview.png"
+            />
+            <p>4 mois</p>
+          </div>
         </div>
-        <!-- Durée du projet -->
-        <div class="project-detail">
-          <img
-            alt="Durée"
-            class="icon"
-            src="Portfolio/picture/horlogelogo-removebg-preview.png"
-          />
-          <p>4 mois</p>
+        <p>Informations détaillées sur le projet réalisé à l'école.</p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal2"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal2', 'docs_modal2')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal2" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="Portfolio/doc/Maquette (1).png" target="_blank"
+                >Télécharger la maquette - Projet AlerTrain</a
+              >
+            </p>
+          </div>
         </div>
       </div>
-      <p>Informations détaillées sur le projet réalisé à l'école.</p>
-      <div class="documents-section">
-        <h3>Accéder aux Documents</h3>
-        <p>
-          Veuillez entrer le mot de passe pour accéder aux documents liés à ce
-          projet.
-        </p>
-        <input
-          id="password_modal2"
-          placeholder="Mot de passe"
-          type="password"
-        /><button onclick="validatePassword('password_modal2', 'docs_modal2')">
-          Valider
-        </button>
-        <div id="docs_modal2" style="display: none; margin-top: 20px">
-          <h4>Documents disponibles</h4>
+    </div>
+
+    <!-- Modale pour Projet Ecole 3 -->
+    <div class="modal" id="modal6">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Détails du Projet</h2>
+        <div class="project-info">
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="Portfolio/picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participant</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="Portfolio/picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <i class="devicon-python-plain colored language-logo"></i>
+              <i class="devicon-html5-plain colored language-logo"></i>
+              <i class="devicon-css3-plain colored language-logo"></i>
+              <i class="devicon-javascript-plain colored language-logo"></i>
+            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="Portfolio/picture/horlogelogo-removebg-preview.png"
+            />
+            <p>En cours</p>
+          </div>
+        </div>
+        <p>Informations détaillées sur le projet réalisé en entreprise.</p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
           <p>
-            <a href="Portfolio/doc/Maquette (1).png" target="_blank"
-              >Télécharger la maquette - Projet AlerTrain</a
-            >
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
           </p>
+          <input
+            id="password_modal4"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal4', 'docs_modal4')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal4" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal4_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - API Amazon</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal4_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - API Amazon</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -323,7 +409,7 @@
               class="icon"
               src="Portfolio/picture/equipe-removebg-preview.png"
             />
-            <p>1 Participants</p>
+            <p>1 Participant</p>
           </div>
           <!-- Technologies utilisées -->
           <div class="project-detail">
@@ -401,7 +487,7 @@
               class="icon"
               src="Portfolio/picture/equipe-removebg-preview.png"
             />
-            <p>1 Participants</p>
+            <p>1 Participant</p>
           </div>
           <!-- Technologies utilisées -->
           <div class="project-detail">
@@ -476,7 +562,7 @@
               class="icon"
               src="Portfolio/picture/equipe-removebg-preview.png"
             />
-            <p>1 Participants</p>
+            <p>1 Participant</p>
           </div>
           <!-- Technologies utilisées -->
           <div class="project-detail">
