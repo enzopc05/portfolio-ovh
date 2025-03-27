@@ -114,7 +114,10 @@
             <article class="project" data-tech="python html css javascript">
               <h3>JO Ticket</h3>
               <div class="project-image-container">
-                <img alt="Image du projet école 3" src="Portfolio/picture/" />
+                <img
+                  alt="Image du projet école 3"
+                  src="Portfolio/picture/Logo_JO_d'été_-_Paris_2024.png"
+                />
               </div>
               <p>
                 Création d'une application d'administration qui gère les matchs,
@@ -122,6 +125,23 @@
                 une qui permet de scanner les QR code sur les tickets.
               </p>
               <button class="btn" data-modal="modal6">En savoir plus</button>
+            </article>
+            <article
+              class="project"
+              data-tech="React Express html css javascript"
+            >
+              <h3>gestEPI</h3>
+              <div class="project-image-container">
+                <img
+                  alt="Image du projet école 3"
+                  src="Portfolio/picture/climbing-4514507_1280.jpg"
+                />
+              </div>
+              <p>
+                GestEPI est une application web pour gérer des Équipements de
+                Protection Individuelle dans le cadre de l'escalade.
+              </p>
+              <button class="btn" data-modal="modal8">En savoir plus</button>
             </article>
           </div>
         </section>
@@ -163,6 +183,35 @@
               </div>
               <p>Création d'une API</p>
               <button class="btn" data-modal="modal5">En savoir plus</button>
+            </article>
+            <article class="project" data-tech="csharp sql">
+              <h3>POM SAG</h3>
+              <div class="project-image-container">
+                <img
+                  alt="Image du projet entreprise 1"
+                  src="Portfolio/picture/POM.jpg"
+                />
+              </div>
+              <p>
+                Création d'un logiciel de transfert de donnée, faisant des
+                appels à une API pour transférer les données dans une base de
+                donnée
+              </p>
+              <button class="btn" data-modal="modal9">En savoir plus</button>
+            </article>
+            <article class="project" data-tech="vb6">
+              <h3>Vérification numéro de traçabilité</h3>
+              <div class="project-image-container">
+                <img
+                  alt="Image du projet entreprise 1"
+                  src="Portfolio/picture/POM.jpg"
+                />
+              </div>
+              <p>
+                Création d'un logiciel permettant de vérifier et modifier le
+                numéro de traçabilité sur la base de plusieurs critères
+              </p>
+              <button class="btn" data-modal="modal10">En savoir plus</button>
             </article>
           </div>
         </section>
@@ -326,7 +375,7 @@
     </div>
 
     <!-- Modale pour Projet Ecole 3 -->
-    <div class="modal" id="modal6">
+    <div class="modal" id="modal7">
       <div class="modal-content">
         <span class="close">×</span>
         <h2>Détails du Projet</h2>
@@ -390,6 +439,95 @@
             <p>
               <a href="path/to/modal4_doc2.pdf" target="_blank"
                 >Télécharger le document 2 - API Amazon</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale pour Projet École 4 -->
+    <div class="modal" id="modal8">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Détails du Projet</h2>
+        <!-- Informations supplémentaires -->
+        <div class="project-info">
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="Portfolio/picture/equipe-removebg-preview.png"
+            />
+            <p>4 Participants</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="Portfolio/picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <i class="devicon-python-plain colored language-logo"></i>
+              <i class="devicon-javascript-plain colored language-logo"></i>
+              <i class="devicon-html5-plain colored language-logo"></i>
+            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="Portfolio/picture/horlogelogo-removebg-preview.png"
+            />
+            <p>4 mois</p>
+          </div>
+        </div>
+        <p>Informations détaillées sur le projet réalisé à l'école.</p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal1"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal1', 'docs_modal1')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal1" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="Portfolio/doc/README.md" target="_blank"
+                >Télécharger le README - API Marvel</a
+              >
+            </p>
+
+            <p>
+              <a href="Portfolio/doc/Cahier des charges.pdf" target="_blank"
+                >Télécharger le cahier des charges - API Marvel</a
+              >
+            </p>
+
+            <p>
+              <a href="Portfolio/doc/Charte Graphique.pdf" target="_blank"
+                >Télécharger la chartes graphiques - API Marvel</a
+              >
+            </p>
+            <p>
+              <a href="Portfolio/doc/les4fantastiques.sql" target="_blank"
+                >Télécharger la BDD - API Marvel</a
+              >
+            </p>
+            <p>
+              <a href="Portfolio/doc/Diagramme BDD.png" target="_blank"
+                >Télécharger le diagramme de BDD - API Marvel</a
               >
             </p>
           </div>
@@ -661,6 +799,164 @@
         </div>
       </div>
     </div>
+
+    <!-- Modale pour Projet Entreprise 4 -->
+    <div class="modal" id="modal9">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Détails du Projet</h2>
+        <div class="project-info">
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="Portfolio/picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participant</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="Portfolio/picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <img
+                alt="VBA Logo"
+                class="language-logo"
+                src="Portfolio/picture/vbalogo-removebg-preview.png "
+              />
+            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="Portfolio/picture/horlogelogo-removebg-preview.png"
+            />
+            <p>1 semaine</p>
+          </div>
+        </div>
+        <p>
+          Ce projet consiste à développer une macro VBA permettant d'extraire et
+          de présenter des données depuis une base de données SQL dans un
+          tableau Excel. L'objectif principal est de simplifier l'accès aux
+          informations critiques relatives aux articles et de les rendre
+          facilement exploitables par les utilisateurs via un fichier Excel.
+        </p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal3"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal3', 'docs_modal3')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal3" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal3_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - Macro EXCEL</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal3_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - Macro EXCEL</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale pour Projet Entreprise 5 -->
+    <div class="modal" id="modal10">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Détails du Projet</h2>
+        <div class="project-info">
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="Portfolio/picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participant</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="Portfolio/picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <img
+                alt="VBA Logo"
+                class="language-logo"
+                src="Portfolio/picture/vbalogo-removebg-preview.png "
+              />
+            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="Portfolio/picture/horlogelogo-removebg-preview.png"
+            />
+            <p>1 semaine</p>
+          </div>
+        </div>
+        <p>
+          Ce projet consiste à développer une macro VBA permettant d'extraire et
+          de présenter des données depuis une base de données SQL dans un
+          tableau Excel. L'objectif principal est de simplifier l'accès aux
+          informations critiques relatives aux articles et de les rendre
+          facilement exploitables par les utilisateurs via un fichier Excel.
+        </p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal3"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal3', 'docs_modal3')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal3" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal3_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - Macro EXCEL</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal3_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - Macro EXCEL</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container">
         <!-- Section Contact -->
@@ -758,5 +1054,36 @@
     <!-- Script pour gérer les modales -->
     <script src="Portfolio/dev-sheet/realisations.js"></script>
     <script src="Portfolio/dev-sheet/scroll-to-top.js"></script>
+    <!-- Prévisualiseur de documents -->
+    <div class="document-preview-container">
+      <div class="preview-header">
+        <h3 class="preview-title">Prévisualisation du document</h3>
+        <div class="preview-actions">
+          <button class="preview-action-btn" id="preview-download">
+            <i class="fas fa-download"></i> Télécharger
+          </button>
+          <button class="preview-action-btn" id="preview-close">
+            <i class="fas fa-times"></i> Fermer
+          </button>
+        </div>
+      </div>
+      <div class="preview-content">
+        <iframe
+          class="preview-frame"
+          title="Prévisualisation du document"
+        ></iframe>
+        <div class="preview-loading">
+          <div class="preview-loading-spinner"></div>
+          <p>Chargement du document...</p>
+        </div>
+        <div class="preview-error" style="display: none">
+          <i class="fas fa-exclamation-circle"></i>
+          <p>
+            Impossible de prévisualiser ce document. Veuillez le télécharger
+            pour le consulter.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -695,24 +695,362 @@ body.night-mode .languages-used {
   margin-bottom: 10px;
 }
 
-.documents-section input {
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Nouveau style pour la section documents */
+.docs-container {
+  margin-top: 20px;
+  display: none;
 }
 
-.documents-section button {
-  background-color: #b67332;
+.password-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.password-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 2px solid var(--color);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #8a4f24;
+  box-shadow: 0 0 5px rgba(138, 79, 36, 0.3);
+}
+
+.validate-btn {
+  background-color: var(--color);
   color: white;
-  padding: 10px 20px;
   border: none;
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.documents-section button:hover {
+.validate-btn:hover {
   background-color: #8a4f24;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.doc-card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--color);
+}
+
+.doc-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doc-icon {
+  margin-right: 15px;
+  font-size: 24px;
+  color: var(--color);
+}
+
+.doc-info {
+  flex-grow: 1;
+}
+
+.doc-title {
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 5px;
+}
+
+.doc-description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.doc-download {
+  background-color: var(--color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.doc-download:hover {
+  background-color: #8a4f24;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Mode nuit */
+body.night-mode .password-input {
+  background-color: #003366;
+  color: #d4e3fc;
+  border-color: #4cadad;
+}
+
+body.night-mode .password-input:focus {
+  border-color: #4cadad;
+  box-shadow: 0 0 5px rgba(76, 173, 173, 0.3);
+}
+
+body.night-mode .validate-btn {
+  background-color: #4cadad;
+  color: #001f3f;
+}
+
+body.night-mode .validate-btn:hover {
+  background-color: #3a8a8a;
+}
+
+body.night-mode .doc-card {
+  background-color: #002b5c;
+  border-left-color: #4cadad;
+}
+
+body.night-mode .doc-icon {
+  color: #4cadad;
+}
+
+body.night-mode .doc-title {
+  color: #e6f0ff;
+}
+
+body.night-mode .doc-description {
+  color: #d4e3fc;
+}
+
+body.night-mode .doc-download {
+  background-color: #4cadad;
+  color: #001f3f;
+}
+
+body.night-mode .doc-download:hover {
+  background-color: #3a8a8a;
+}
+
+body.night-mode .error-message {
+  color: #ff6b6b;
+}
+
+/* Style pour la prévisualisation de document */
+.document-preview-container {
+  position: fixed;
+  top: 5%; /* Positionner à la même hauteur que les modales */
+  left: 50%; /* Commencer à partir du milieu de l'écran */
+  width: 45%; /* Prendre la moitié droite de l'écran */
+  height: 90vh;
+  background-color: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 100; /* Même niveau z-index que le modal */
+  border-radius: 12px;
+  transform: translateX(150%); /* Commencer hors de l'écran */
+  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.document-preview-container.active {
+  transform: translateX(0); /* Revenir à la position normale */
+}
+
+/* Ajustement du modal lorsque la prévisualisation est active */
+.modal.with-preview .modal-content {
+  width: 45%;
+  left: -5%;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+/* Le reste du CSS pour la prévisualisation reste le même */
+.preview-header {
+  background-color: var(--color);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px 12px 0 0;
+}
+
+.preview-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.preview-action-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.preview-action-btn:hover {
+  transform: translateY(-3px);
+}
+
+.preview-content {
+  flex: 1;
+  padding: 0;
+  overflow: auto;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.preview-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.preview-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preview-error {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.preview-error i {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.preview-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mode nuit pour la prévisualisation */
+body.night-mode .document-preview-container {
+  background-color: #002b5c;
+}
+
+body.night-mode .preview-header {
+  background-color: #004080;
+}
+
+body.night-mode .preview-content {
+  background-color: #001f3f;
+}
+
+body.night-mode .preview-loading {
+  background-color: rgba(0, 31, 63, 0.9);
+  color: #d4e3fc;
+}
+
+body.night-mode .preview-loading-spinner {
+  border: 5px solid #003366;
+  border-top: 5px solid #4cadad;
+}
+
+body.night-mode .preview-error {
+  color: #d4e3fc;
+}
+
+body.night-mode .preview-error i {
+  color: #ff6b6b;
+}
+
+/* Responsive pour la prévisualisation */
+@media (max-width: 991px) {
+  .document-preview-container {
+    width: 90%;
+    left: 5%;
+  }
+
+  .modal.with-preview .modal-content {
+    width: 90%;
+    left: 0;
+    margin: 10% auto 5%;
+  }
+
+  /* En mode mobile, la prévisualisation sera au-dessus du modal, pas à côté */
+  .document-preview-container.active {
+    z-index: 101;
+    top: 10%;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .document-preview-container {
+    width: 100%;
+  }
 }
 
 #docs1 {
@@ -1729,12 +2067,6 @@ body.night-mode .contact-modal .submit-button:hover {
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
-  }
-
-  .documents-section input,
-  .documents-section button {
-    width: 100%;
-    margin: 5px 0;
   }
 
   /* Ajustements du footer */
