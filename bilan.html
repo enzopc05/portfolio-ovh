@@ -7,23 +7,18 @@
     <title>Bilan - Enzo Pace</title>
     <meta
       name="description"
-      content="Bilan de mon parcours, compétences acquises et perspectives professionnelles en développement et gestion de projets IT."
+      content="Bilan de mon parcours et des compétences acquises lors du BTS SIO SLAM - Portfolio d'Enzo Pace"
     />
     <meta
       name="keywords"
-      content="Enzo Pace, portfolio, BTS SIO, SLAM, développement web, projets informatiques, veille technologique"
+      content="Enzo Pace, portfolio, BTS SIO, SLAM, compétences, bilan, développement web"
     />
     <meta name="author" content="Enzo Pace" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.enzopc.com/[nom-de-la-page]" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="Portfolio/personnage/favicion.png"
-    />
+    <link rel="canonical" href="https://www.enzopc.com/bilan" />
     <link rel="stylesheet" href="Portfolio/style-sheet/bilan.css" />
+    <link rel="stylesheet" href="Portfolio/style-sheet/bilan-enhanced.css" />
     <link rel="stylesheet" href="Portfolio/style-sheet/scroll-to-top.css" />
-    <link rel="stylesheet" href="Portfolio/style-sheet/language-switcher.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -36,6 +31,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
@@ -46,11 +43,11 @@
         </div>
         <nav>
           <ul>
-            <li><a href="accueil">Accueil</a></li>
-            <li><a href="entreprise">Entreprise</a></li>
-            <li><a href="realisations">Réalisations</a></li>
-            <li><a href="veille">Veille</a></li>
-            <li><a href="bilan">Bilan</a></li>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
           </ul>
         </nav>
         <div class="theme-container">
@@ -82,52 +79,171 @@
           </p>
         </section>
 
-        <!-- Section 2 : Bilan des compétences acquises -->
-        <section id="competences">
-          <h2>Bilan des Compétences Acquises</h2>
-          <ul>
-            <li>
-              Compétences en développement web : HTML, CSS, JavaScript, PHP,
-              etc.
-            </li>
-            <li>
-              Compétences en gestion de projet IT : Méthodologies agiles,
-              gestion des risques, etc.
-            </li>
-            <li>Compétences en bases de données : MySQL, SQL Server, etc.</li>
-            <li>
-              Développement personnel : Résolution de problèmes, travail en
-              équipe, autonomie, etc.
-            </li>
-          </ul>
+        <!-- Section 2 : Timeline d'évolution des compétences -->
+        <section id="skills-evolution">
+          <h2>Évolution de mes compétences</h2>
+          <div class="timeline-controls">
+            <button class="timeline-btn active" data-period="before">
+              Avant BTS
+            </button>
+            <button class="timeline-btn" data-period="first-year">
+              Première année
+            </button>
+            <button class="timeline-btn" data-period="second-year">
+              Deuxième année
+            </button>
+          </div>
+          <div class="timeline-container">
+            <div class="timeline-period active" id="before-bts">
+              <h3>Avant le BTS SIO</h3>
+              <div class="skills-wrapper">
+                <!-- Sera rempli dynamiquement -->
+              </div>
+            </div>
+            <div class="timeline-period" id="first-year">
+              <h3>Première année de BTS SIO</h3>
+              <div class="skills-wrapper">
+                <!-- Sera rempli dynamiquement -->
+              </div>
+            </div>
+            <div class="timeline-period" id="second-year">
+              <h3>Deuxième année de BTS SIO</h3>
+              <div class="skills-wrapper">
+                <!-- Sera rempli dynamiquement -->
+              </div>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-point" data-period="before">
+                <span class="point-label">Avant BTS</span>
+              </div>
+              <div class="progress-point" data-period="first-year">
+                <span class="point-label">1ère année</span>
+              </div>
+              <div class="progress-point" data-period="second-year">
+                <span class="point-label">2ème année</span>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 3 : Analyse des projets réalisés -->
+        <!-- Section 3 : Graphiques de compétences -->
+        <section id="skills-charts">
+          <h2>Analyse des compétences acquises</h2>
+          <div class="charts-tabs">
+            <button class="chart-tab active" data-chart="radar">
+              Vue d'ensemble
+            </button>
+            <button class="chart-tab" data-chart="bars">Progression</button>
+            <button class="chart-tab" data-chart="categories">
+              Par catégorie
+            </button>
+          </div>
+          <div class="charts-container">
+            <div class="chart-wrapper active" id="radar-chart-container">
+              <canvas id="skills-radar"></canvas>
+            </div>
+            <div class="chart-wrapper" id="bars-chart-container">
+              <canvas id="skills-bars"></canvas>
+            </div>
+            <div class="chart-wrapper" id="categories-chart-container">
+              <canvas id="skills-categories"></canvas>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <div class="legend-item before-bts">
+              <span class="legend-color"></span> Avant BTS
+            </div>
+            <div class="legend-item first-year">
+              <span class="legend-color"></span> Première année
+            </div>
+            <div class="legend-item second-year">
+              <span class="legend-color"></span> Deuxième année
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4 : Analyse des projets réalisés -->
         <section id="projets">
           <h2>Analyse des Projets Réalisés</h2>
           <p>
             Dans cette partie, j'analyse les principaux projets que j'ai
             réalisés durant ma formation :
           </p>
-          <ul>
-            <li>
-              <strong>Projet 1 : </strong>Description du projet, les objectifs,
-              les technologies utilisées, et le résultat final.
-            </li>
-            <li>
-              <strong>Projet 2 : </strong>Description du projet, les défis
-              rencontrés, les solutions trouvées, et les compétences
-              développées.
-            </li>
-            <li>
-              <strong>Projet 3 : </strong>Leçons tirées de ce projet, ce que
-              j'aurais fait différemment, et comment il a contribué à mon
-              apprentissage.
-            </li>
-          </ul>
+          <div class="projects-container">
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Les4Fantastiques</h3>
+                <span class="project-period">Première année</span>
+              </div>
+              <div class="project-content">
+                <p>Requête à l'API Marvel afin d'avoir des résultats visuels</p>
+                <div class="skills-used">
+                  <span class="skill-tag">HTML/CSS</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">API</span>
+                </div>
+                <div class="project-learnings">
+                  <h4>Compétences développées</h4>
+                  <ul>
+                    <li>Intégration API externe</li>
+                    <li>Travail d'équipe</li>
+                    <li>Présentation visuelle des données</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>GhostTrack</h3>
+                <span class="project-period">Première année</span>
+              </div>
+              <div class="project-content">
+                <p>Logiciel de ticketing sur le thème des trains</p>
+                <div class="skills-used">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">JavaFX</span>
+                  <span class="skill-tag">Base de données</span>
+                </div>
+                <div class="project-learnings">
+                  <h4>Compétences développées</h4>
+                  <ul>
+                    <li>Programmation orientée objet</li>
+                    <li>Interface graphique en JavaFX</li>
+                    <li>Gestion de base de données</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Macro EXCEL</h3>
+                <span class="project-period">Deuxième année</span>
+              </div>
+              <div class="project-content">
+                <p>Amélioration d'une macro EXCEL pour Eurodislog</p>
+                <div class="skills-used">
+                  <span class="skill-tag">VBA</span>
+                  <span class="skill-tag">Excel</span>
+                  <span class="skill-tag">SQL</span>
+                </div>
+                <div class="project-learnings">
+                  <h4>Compétences développées</h4>
+                  <ul>
+                    <li>Automatisation de tâches</li>
+                    <li>Manipulation de données</li>
+                    <li>Optimisation de processus</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 4 : Retour d'expérience sur la formation -->
+        <!-- Section 5 : Retour d'expérience sur la formation -->
         <section id="experience">
           <h2>Retour d'Expérience sur la Formation</h2>
           <p>
@@ -135,9 +251,50 @@
             aspects que j'ai le plus appréciés, les défis que j'ai surmontés, et
             comment cela m'a préparé pour la suite de ma carrière.
           </p>
+
+          <div class="experience-blocks">
+            <div class="experience-block">
+              <div class="icon-container">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Points forts</h3>
+              <ul>
+                <li>Apprentissage pratique via des projets concrets</li>
+                <li>Diversité des technologies abordées</li>
+                <li>Alternance entre théorie et pratique</li>
+                <li>Travail en équipe sur des projets collaboratifs</li>
+              </ul>
+            </div>
+
+            <div class="experience-block">
+              <div class="icon-container">
+                <i class="fas fa-mountain"></i>
+              </div>
+              <h3>Défis rencontrés</h3>
+              <ul>
+                <li>Adaptation aux nouvelles technologies</li>
+                <li>Gestion du temps entre cours et projets</li>
+                <li>Apprentissage de concepts avancés de programmation</li>
+                <li>Travail sous pression lors des périodes d'examens</li>
+              </ul>
+            </div>
+
+            <div class="experience-block">
+              <div class="icon-container">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Leçons apprises</h3>
+              <ul>
+                <li>Importance de la veille technologique</li>
+                <li>Valeur du travail en équipe et de la communication</li>
+                <li>Nécessité d'une organisation rigoureuse</li>
+                <li>Capacité d'adaptation face aux nouvelles technologies</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 5 : Perspectives pour l'avenir -->
+        <!-- Section 6 : Perspectives pour l'avenir -->
         <section id="avenir">
           <h2>Perspectives pour l'Avenir</h2>
           <p>
@@ -145,6 +302,67 @@
             compte continuer à développer mes compétences, et dans quel domaine
             je souhaite m'épanouir après la fin de cette formation.
           </p>
+
+          <div class="future-roadmap">
+            <div class="roadmap-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Court terme (0-1 an)</h3>
+                <p>
+                  Obtention du BTS SIO SLAM et perfectionnement dans les
+                  technologies web modernes (React, Node.js)
+                </p>
+              </div>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Moyen terme (1-3 ans)</h3>
+                <p>
+                  Intégration d'une équipe de développement web ou mobile,
+                  acquisition d'expérience professionnelle et spécialisation
+                </p>
+              </div>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Long terme (3-5 ans)</h3>
+                <p>
+                  Évolution vers un poste de chef de projet ou développeur
+                  senior, potentiellement avec formation complémentaire
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="learning-goals">
+            <h3>Objectifs d'apprentissage</h3>
+            <div class="goals-container">
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fab fa-react"></i></div>
+                <div class="goal-text">React.js</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fab fa-node-js"></i></div>
+                <div class="goal-text">Node.js</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fab fa-docker"></i></div>
+                <div class="goal-text">Docker</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="goal-text">React Native</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fas fa-database"></i></div>
+                <div class="goal-text">NoSQL</div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -162,17 +380,15 @@
           <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
         </div>
 
-        <!-- Section Liens Rapides dans le footer -->
+        <!-- Section Liens Rapides -->
         <div class="footer-links">
           <h3>Liens Rapides</h3>
           <ul>
-            <li><a href="accueil">Accueil</a></li>
-            <li><a href="entreprise">Entreprise</a></li>
-            <li><a href="realisations">Réalisations</a></li>
-            <li><a href="veille">Veille</a></li>
-            <li><a href="bilan">Bilan</a></li>
-            <li><a href="rgpd">Politique de confidentialité</a></li>
-            <li><a href="mentions-legales">Mentions légales</a></li>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
           </ul>
         </div>
 
@@ -181,23 +397,20 @@
           <h3>Réseaux Sociaux</h3>
           <div class="social-icons">
             <a href="https://linkedin.com" target="_blank">
-              <img
-                src="Portfolio/picture/logo-linkedin-noir.jpg"
-                alt="LinkedIn"
-              />
+              <img src="../picture/logo-linkedin-noir.jpg" alt="LinkedIn" />
             </a>
             <a
               href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
               target="_blank"
             >
               <img
-                src="Portfolio/picture/logo-instagram-noir-png.jpg"
+                src="../picture/logo-instagram-noir-png.jpg"
                 alt="Instagram"
               />
             </a>
             <a href="https://github.com/enzopc05" target="_blank">
               <img
-                src="Portfolio/picture/githublogo-removebg-preview.png"
+                src="../picture/githublogo-removebg-preview.png"
                 alt="GitHub"
               />
             </a>
@@ -211,7 +424,6 @@
       </div>
     </footer>
 
-    <!-- Modale de contact -->
     <!-- Modale de contact -->
     <div id="contactModal" class="modal contact-modal">
       <div class="modal-content contact-modal-content">
@@ -237,19 +449,6 @@
               required
             ></textarea>
           </div>
-          <div class="form-consent">
-            <input
-              type="checkbox"
-              id="consent-checkbox"
-              name="consent"
-              required
-            />
-            <label for="consent-checkbox"
-              >J'ai lu et j'accepte la
-              <a href="rgpd" target="_blank">politique de confidentialité</a
-              >.</label
-            >
-          </div>
           <input
             type="hidden"
             name="_subject"
@@ -259,9 +458,11 @@
         </form>
       </div>
     </div>
+
     <script src="Portfolio/dev-sheet/scroll-to-top.js"></script>
     <script src="Portfolio/dev-sheet/bilan.js"></script>
-    <script src="Portfolio/dev-sheet/language-switcher.js"></script>
-    <script src="Portfolio/dev-sheet/image-optimization.js"></script>
+    <script src="Portfolio/dev-sheet/skills-data.js"></script>
+    <script src="Portfolio/dev-sheet/skills-timeline.js"></script>
+    <script src="Portfolio/dev-sheet/skills-charts.js"></script>
   </body>
 </html>
