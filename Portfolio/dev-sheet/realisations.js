@@ -222,24 +222,44 @@ function setupDocumentSections() {
     // API Amazon - Projet Entreprise 2
     modal4: [
       {
-        title: "",
+        title: "Documentation d'utilisation",
         description: "",
-        type: "",
-        url: "",
+        type: "pdf",
+        url: "Portfolio/doc/amazon_doc.pdf",
       },
     ],
 
     // API POM - Projet Entreprise 3
     modal5: [
       {
-        title: "",
+        title: "Convention GIT",
+        description:
+          "Convention de commit git pour ordonner le projet entre tous les participants",
+        type: "markdown",
+        url: "Portfolio/doc/Git-convention.md",
+      },
+      {
+        title: "Schéma Projet POM",
+        description: "arborescence du projet",
+        type: "png",
+        url: "Portfolio/doc/schémaProjetPOM.png",
+      },
+      {
+        title: "Base de donnée de test du projet",
+        description:
+          "Base de donnée utilisé pour les tests avant l'entré en production",
+        type: "sql",
+        url: "Portfolio/doc/pomBDD.sql",
+      },
+      {
+        title: "README - POM API",
         description: "",
-        type: "",
-        url: "",
+        type: "markdown",
+        url: "Portfolio/doc/README_POM-API.md",
       },
     ],
 
-    // JO Ticket - Projet École 3
+    // (Non utilisé actuellement)
     modal6: [
       {
         title: "",
@@ -248,14 +268,25 @@ function setupDocumentSections() {
         url: "",
       },
     ],
-
-    // (Non utilisé actuellement)
+    // JO Ticket - Projet École 3
     modal7: [
       {
-        title: "",
+        title: "README - PROJET JO",
         description: "",
-        type: "",
-        url: "",
+        type: "markdown",
+        url: "Portfolio/doc/README_JO.md",
+      },
+      {
+        title: "BDD - PROJET JO",
+        description: "",
+        type: "sql",
+        url: "Portfolio/doc/data_jo.sql",
+      },
+      {
+        title: "Schéma - PROJET JO",
+        description: "",
+        type: "png",
+        url: "Portfolio/doc/Schema_Projet_JO.png",
       },
     ],
 
@@ -272,20 +303,32 @@ function setupDocumentSections() {
     // POM SAG - Projet Entreprise 4
     modal9: [
       {
-        title: "",
+        title: "README - POM SAG",
         description: "",
-        type: "",
-        url: "",
+        type: "markdown",
+        url: "Portfolio/doc/README_POM-SAG.md",
+      },
+      {
+        title: "Schéma Projet POM",
+        description: "arborescence du projet",
+        type: "png",
+        url: "Portfolio/doc/schémaProjetPOM.png",
       },
     ],
 
     // Vérification numéro de traçabilité - Projet Entreprise 5
     modal10: [
       {
-        title: "",
+        title: "README - Vérification traçabilité",
         description: "",
-        type: "",
-        url: "",
+        type: "markdown",
+        url: "Portfolio/doc/README_VerifTraca.md",
+      },
+      {
+        title: "Documentation d'utilisation",
+        description: "",
+        type: "pdf",
+        url: "Portfolio/doc/EURO-XXX-IN-00X-A_Verification_traca_exo.pdf",
       },
     ],
 

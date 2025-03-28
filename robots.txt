@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dev-sheet/
+Disallow: /doc/password-protected/
+Sitemap: https://www.enzopc.com/sitemap.xml

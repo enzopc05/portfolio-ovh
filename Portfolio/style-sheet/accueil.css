@@ -1624,6 +1624,42 @@ body.night-mode .credits a {
   background-color: #8a4f24;
   transform: translateY(-3px);
 }
+/* Style pour la case à cocher de consentement */
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-consent input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+.form-consent label {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.form-consent a {
+  color: var(--color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-consent a:hover {
+  text-decoration: underline;
+}
+
+/* Mode nuit */
+body.night-mode .form-consent label {
+  color: #d4e3fc;
+}
+
+body.night-mode .form-consent a {
+  color: #4cadad;
+}
 
 /* Mode nuit */
 body.night-mode .contact-button {

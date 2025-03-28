@@ -6,6 +6,17 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Réalisations - Enzo Pace</title>
+    <meta
+      name="description"
+      content="Explorez mes projets web et logiciels réalisés durant ma formation BTS SIO SLAM et mes expériences professionnelles."
+    />
+    <meta
+      name="keywords"
+      content="Enzo Pace, portfolio, BTS SIO, SLAM, développement web, projets informatiques, veille technologique"
+    />
+    <meta name="author" content="Enzo Pace" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.enzopc.com/[nom-de-la-page]" />
     <link
       rel="icon"
       type="image/png"
@@ -81,6 +92,8 @@
               <option value="vba">VBA</option>
               <option value="vb6">VB6</option>
               <option value="xml">XML</option>
+              <option value="react">React</option>
+              <option value="django">Django</option>
             </select>
           </div>
         </div>
@@ -89,7 +102,7 @@
           <h2 class="section-title">Réalisations École</h2>
           <!-- Conteneur des projets école -->
           <div class="projects-container">
-            <article class="project" data-tech="python javascript html">
+            <article class="project" data-tech="python javascript html django">
               <h3>Les4Fantastiques</h3>
               <div class="project-image-container">
                 <img
@@ -111,7 +124,10 @@
               <p>Logiciel de ticketing sur le thème des trains</p>
               <button class="btn" data-modal="modal2">En savoir plus</button>
             </article>
-            <article class="project" data-tech="python html css javascript">
+            <article
+              class="project"
+              data-tech="python html css javascript django sql"
+            >
               <h3>JO Ticket</h3>
               <div class="project-image-container">
                 <img
@@ -124,11 +140,11 @@
                 une mobile qui permet aux utilisateurs d'acheter des tickets et
                 une qui permet de scanner les QR code sur les tickets.
               </p>
-              <button class="btn" data-modal="modal6">En savoir plus</button>
+              <button class="btn" data-modal="modal7">En savoir plus</button>
             </article>
             <article
               class="project"
-              data-tech="React Express html css javascript"
+              data-tech="react Express html css javascript"
             >
               <h3>gestEPI</h3>
               <div class="project-image-container">
@@ -199,7 +215,7 @@
               </p>
               <button class="btn" data-modal="modal9">En savoir plus</button>
             </article>
-            <article class="project" data-tech="vb6">
+            <article class="project" data-tech="vb6 sql">
               <h3>Vérification numéro de traçabilité</h3>
               <div class="project-image-container">
                 <img
@@ -460,7 +476,7 @@
               class="icon"
               src="Portfolio/picture/equipe-removebg-preview.png"
             />
-            <p>4 Participants</p>
+            <p>1 Participant</p>
           </div>
           <!-- Technologies utilisées -->
           <div class="project-detail">
@@ -970,15 +986,17 @@
           <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
         </div>
 
-        <!-- Section Liens Rapides -->
+        <!-- Section Liens Rapides dans le footer -->
         <div class="footer-links">
           <h3>Liens Rapides</h3>
           <ul>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="entreprise.html">Entreprise</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="veille.html">Veille</a></li>
-            <li><a href="bilan.html">Bilan</a></li>
+            <li><a href="accueil">Accueil</a></li>
+            <li><a href="entreprise">Entreprise</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="veille">Veille</a></li>
+            <li><a href="bilan">Bilan</a></li>
+            <li><a href="rgpd">Politique de confidentialité</a></li>
+            <li><a href="mentions-legales">Mentions légales</a></li>
           </ul>
         </div>
 
@@ -1018,6 +1036,7 @@
     </footer>
 
     <!-- Modale de contact -->
+    <!-- Modale de contact -->
     <div id="contactModal" class="modal contact-modal">
       <div class="modal-content contact-modal-content">
         <span class="close">&times;</span>
@@ -1041,6 +1060,19 @@
               placeholder="Votre message"
               required
             ></textarea>
+          </div>
+          <div class="form-consent">
+            <input
+              type="checkbox"
+              id="consent-checkbox"
+              name="consent"
+              required
+            />
+            <label for="consent-checkbox"
+              >J'ai lu et j'accepte la
+              <a href="rgpd" target="_blank">politique de confidentialité</a
+              >.</label
+            >
           </div>
           <input
             type="hidden"
@@ -1085,5 +1117,6 @@
         </div>
       </div>
     </div>
+    <script src="Portfolio/dev-sheet/image-optimization.js"></script>
   </body>
 </html>

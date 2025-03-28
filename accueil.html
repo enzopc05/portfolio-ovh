@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio - Enzo Pace</title>
+    <meta
+      name="description"
+      content="Portfolio d'Enzo Pace - Étudiant en BTS SIO SLAM, développeur web et gestionnaire de projets IT spécialisé dans les technologies JavaScript, Python et Java"
+    />
+    <meta
+      name="keywords"
+      content="Enzo Pace, portfolio, BTS SIO, SLAM, développement web, projets informatiques, veille technologique"
+    />
+    <meta name="author" content="Enzo Pace" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.enzopc.com/[nom-de-la-page]" />
     <link
       rel="icon"
       type="image/png"
@@ -256,15 +267,17 @@
           <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
         </div>
 
-        <!-- Section Liens Rapides -->
+        <!-- Section Liens Rapides dans le footer -->
         <div class="footer-links">
           <h3>Liens Rapides</h3>
           <ul>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="entreprise.html">Entreprise</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="veille.html">Veille</a></li>
-            <li><a href="bilan.html">Bilan</a></li>
+            <li><a href="accueil">Accueil</a></li>
+            <li><a href="entreprise">Entreprise</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="veille">Veille</a></li>
+            <li><a href="bilan">Bilan</a></li>
+            <li><a href="rgpd">Politique de confidentialité</a></li>
+            <li><a href="mentions-legales">Mentions légales</a></li>
           </ul>
         </div>
 
@@ -548,6 +561,7 @@
     </div>
 
     <!-- Modale de contact -->
+    <!-- Modale de contact -->
     <div id="contactModal" class="modal contact-modal">
       <div class="modal-content contact-modal-content">
         <span class="close">&times;</span>
@@ -572,6 +586,19 @@
               required
             ></textarea>
           </div>
+          <div class="form-consent">
+            <input
+              type="checkbox"
+              id="consent-checkbox"
+              name="consent"
+              required
+            />
+            <label for="consent-checkbox"
+              >J'ai lu et j'accepte la
+              <a href="rgpd" target="_blank">politique de confidentialité</a
+              >.</label
+            >
+          </div>
           <input
             type="hidden"
             name="_subject"
@@ -583,5 +610,6 @@
     </div>
     <script src="Portfolio/dev-sheet/scroll-to-top.js"></script>
     <script src="Portfolio/dev-sheet/accueil.js"></script>
+    <script src="Portfolio/dev-sheet/image-optimization.js"></script>
   </body>
 </html>

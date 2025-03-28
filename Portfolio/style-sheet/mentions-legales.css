@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+/* Importer les styles globaux du site */
+@import "realisations.css";
+
+/* Styles spécifiques pour la page mentions légales */
+.legal-section {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--color);
+}
+
+.last-update {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.legal-block {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.legal-block:last-child {
+  border-bottom: none;
+}
+
+.legal-section h2 {
+  color: var(--color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.legal-section h3 {
+  color: var(--color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.legal-section p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.legal-section a {
+  color: var(--color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.legal-section a:hover {
+  text-decoration: underline;
+}
+
+/* Mode nuit */
+body.night-mode .legal-section {
+  background: #003366;
+  border-color: #4cadad;
+}
+
+body.night-mode .legal-section h2,
+body.night-mode .legal-section h3 {
+  color: #4cadad;
+}
+
+body.night-mode .legal-section p {
+  color: #d4e3fc;
+}
+
+body.night-mode .last-update {
+  color: #a0b3d9;
+}
+
+body.night-mode .legal-section a {
+  color: #4cadad;
+}
+
+body.night-mode .legal-block {
+  border-bottom-color: #002b5c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-section {
+    padding: 20px;
+  }
+
+  .legal-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .legal-section h3 {
+    font-size: 1.2rem;
+  }
+}
