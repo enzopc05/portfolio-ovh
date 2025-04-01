@@ -461,16 +461,30 @@ function setupDocumentPreview() {
     // Sauvegarde du modal actif
     currentModal = modalElement;
 
+    // Ajuster le z-index pour s'assurer que le prévisualiseur est au-dessus de la modale
+    const previewContainer = document.querySelector(
+      ".document-preview-container"
+    );
+    previewContainer.style.zIndex = "2000"; // Valeur plus élevée que celle de la modale
+
     // Ajout de la classe pour indiquer que le modal a une prévisualisation à côté
     currentModal.classList.add("with-preview");
 
     // Mise à jour du titre
+    const previewTitle = document.querySelector(".preview-title");
     previewTitle.textContent = doc.title;
 
     // Mise à jour du lien de téléchargement
+    const previewDownload = document.getElementById("preview-download");
     previewDownload.onclick = function () {
       window.open(doc.url, "_blank");
     };
+
+    // Éléments de prévisualisation
+    const previewFrame = document.querySelector(".preview-frame");
+    const previewLoading = document.querySelector(".preview-loading");
+    const previewError = document.querySelector(".preview-error");
+    const previewContent = document.querySelector(".preview-content");
 
     // Afficher le chargement
     previewLoading.style.display = "flex";
@@ -520,13 +534,12 @@ function setupDocumentPreview() {
 
       imgContainer.appendChild(img);
 
-      const previewContent = document.querySelector(".preview-content");
       previewContent.innerHTML = "";
       previewContent.appendChild(imgContainer);
 
       img.onerror = showPreviewError;
     } else if (fileExtension === "md" || doc.type === "markdown") {
-      // Pour les fichiers Markdown
+      // Pour les fichiers Markdown avec Marked.js
       fetch(doc.url)
         .then((response) => response.text())
         .then((text) => {
@@ -534,16 +547,24 @@ function setupDocumentPreview() {
           previewLoading.style.display = "none";
 
           const textContainer = document.createElement("div");
+          textContainer.className = "markdown-content";
           textContainer.style.padding = "20px";
           textContainer.style.width = "100%";
           textContainer.style.height = "100%";
           textContainer.style.overflow = "auto";
-          textContainer.style.whiteSpace = "pre-wrap";
-          textContainer.style.fontFamily = "monospace";
-          textContainer.style.lineHeight = "1.5";
-          textContainer.textContent = text;
+          textContainer.style.backgroundColor = "#fff";
 
-          const previewContent = document.querySelector(".preview-content");
+          // Convertir le Markdown en HTML avec Marked
+          if (typeof marked !== "undefined") {
+            textContainer.innerHTML = marked.parse(text);
+          } else {
+            // Fallback si Marked n'est pas disponible
+            textContainer.style.whiteSpace = "pre-wrap";
+            textContainer.style.fontFamily = "monospace";
+            textContainer.style.lineHeight = "1.5";
+            textContainer.textContent = text;
+          }
+
           previewContent.innerHTML = "";
           previewContent.appendChild(textContainer);
         })
@@ -557,26 +578,30 @@ function setupDocumentPreview() {
           previewLoading.style.display = "none";
 
           const textContainer = document.createElement("div");
+          textContainer.className = "sql-content";
           textContainer.style.padding = "20px";
           textContainer.style.width = "100%";
           textContainer.style.height = "100%";
           textContainer.style.overflow = "auto";
           textContainer.style.whiteSpace = "pre-wrap";
-          textContainer.style.fontFamily = "monospace";
+          textContainer.style.fontFamily =
+            "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace";
           textContainer.style.lineHeight = "1.5";
+          textContainer.style.backgroundColor = "#f8f8f8";
+          textContainer.style.margin = "0";
 
           // Coloration syntaxique basique pour SQL
           const coloredText = text
             .replace(
-              /(SELECT|INSERT|UPDATE|DELETE|CREATE|TABLE|FROM|WHERE|AND|OR|JOIN|ON|AS|NULL|NOT|PRIMARY|KEY|FOREIGN|REFERENCES|INT|VARCHAR|TEXT|DATE|UNIQUE|INDEX)/gi,
+              /(SELECT|INSERT|UPDATE|DELETE|CREATE|TABLE|FROM|WHERE|AND|OR|JOIN|ON|AS|NULL|NOT|PRIMARY|KEY|FOREIGN|REFERENCES|INT|VARCHAR|TEXT|DATE|UNIQUE|INDEX|ENGINE|DEFAULT|COLLATE|CHARSET|VALUES|INTO)/gi,
               '<span style="color: #0066cc; font-weight: bold;">$1</span>'
             )
             .replace(/('.*?')/g, '<span style="color: #009900;">$1</span>')
-            .replace(/(--.*)/g, '<span style="color: #777777;">$1</span>');
+            .replace(/(--.*)/g, '<span style="color: #777777;">$1</span>')
+            .replace(/(\d+)/g, '<span style="color: #FF5722;">$1</span>'); // Coloration des nombres
 
           textContainer.innerHTML = coloredText;
 
-          const previewContent = document.querySelector(".preview-content");
           previewContent.innerHTML = "";
           previewContent.appendChild(textContainer);
         })
@@ -586,11 +611,8 @@ function setupDocumentPreview() {
       showPreviewError();
     }
 
-    // Afficher le conteneur de prévisualisation (pas besoin d'overlay dans ce cas)
+    // Afficher le conteneur de prévisualisation
     previewContainer.classList.add("active");
-
-    // Modifier l'apparence du modal pour laisser de la place à la prévisualisation
-    // Ceci se fait via les classes CSS
   };
 
   // Fonction pour afficher une erreur de prévisualisation
@@ -650,4 +672,193 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Ajouter la nouvelle fonctionnalité de documents
   setupDocumentSections();
+});
+
+// Système de filtrage des projets avec animations
+document.addEventListener("DOMContentLoaded", function () {
+  const techFilter = document.getElementById("techFilter");
+  const typeFilter = document.getElementById("typeFilter");
+  const dateFilter = document.getElementById("dateFilter");
+  const resetFiltersBtn = document.getElementById("resetFilters");
+  const projects = document.querySelectorAll(".project");
+
+  // Animation d'entrée initiale pour tous les projets
+  projects.forEach((project, index) => {
+    setTimeout(() => {
+      project.classList.add("fade-in");
+    }, index * 100); // Délai progressif pour chaque projet
+  });
+
+  // Fonction pour appliquer les filtres
+  function applyFilters() {
+    const selectedTech = techFilter.value;
+    const selectedType = typeFilter.value;
+    const selectedDate = dateFilter.value;
+
+    const visibleProjects = []; // Projets qui correspondent aux filtres
+
+    // Première étape : déterminer quels projets doivent être affichés/masqués
+    projects.forEach((project) => {
+      const projectTechs = project.getAttribute("data-tech") || "";
+      const projectType = project.getAttribute("data-type") || "";
+      const projectDate = project.getAttribute("data-date") || "";
+
+      let techMatch =
+        selectedTech === "all" || projectTechs.includes(selectedTech);
+      let typeMatch = selectedType === "all" || projectType === selectedType;
+      let dateMatch = true; // Par défaut, on suppose que la date correspond
+
+      // Vérification supplémentaire pour le filtre de date
+      if (selectedDate !== "all") {
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth() + 1; // Les mois commencent à 0
+
+        // Traitement des dates au format YYYY-MM
+        const [projectYear, projectMonth] = (projectDate || "")
+          .split("-")
+          .map(Number);
+
+        // Définir ce qui est considéré comme "récent" (par exemple, les 6 derniers mois)
+        const sixMonthsAgo = new Date();
+        sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+        const sixMonthsAgoYear = sixMonthsAgo.getFullYear();
+        const sixMonthsAgoMonth = sixMonthsAgo.getMonth() + 1;
+
+        if (selectedDate === "recent") {
+          // Vérifier si la date du projet est plus récente que la limite (6 mois)
+          dateMatch =
+            projectYear > sixMonthsAgoYear ||
+            (projectYear === sixMonthsAgoYear &&
+              projectMonth >= sixMonthsAgoMonth);
+        } else if (selectedDate === "old") {
+          // Vérifier si la date du projet est plus ancienne que la limite (6 mois)
+          dateMatch =
+            projectYear < sixMonthsAgoYear ||
+            (projectYear === sixMonthsAgoYear &&
+              projectMonth < sixMonthsAgoMonth);
+        }
+      }
+
+      if (techMatch && typeMatch && dateMatch) {
+        visibleProjects.push(project);
+      } else {
+        // Animer la disparition
+        project.classList.add("fade-out");
+        project.classList.remove("fade-in", "bounce");
+      }
+    });
+
+    // Tri des projets visibles par date
+    visibleProjects.sort((a, b) => {
+      const dateA = a.getAttribute("data-date") || "";
+      const dateB = b.getAttribute("data-date") || "";
+
+      if (selectedDate === "recent" || selectedDate === "all") {
+        return dateB.localeCompare(dateA); // Du plus récent au plus ancien par défaut
+      } else {
+        return dateA.localeCompare(dateB); // Du plus ancien au plus récent
+      }
+    });
+
+    // Deuxième étape : après la disparition, reconfigurer l'affichage
+    setTimeout(() => {
+      // Le reste de votre code pour la deuxième étape reste identique...
+      projects.forEach((project) => {
+        if (visibleProjects.includes(project)) {
+          // Si le projet était déjà visible, faire un petit "bounce"
+          if (!project.classList.contains("fade-out")) {
+            project.classList.add("bounce");
+          } else {
+            // Sinon, faire apparaître le projet
+            project.classList.remove("fade-out");
+            project.classList.add("fade-in");
+          }
+          project.style.display = "flex";
+        } else {
+          // Cacher complètement après l'animation
+          project.style.display = "none";
+        }
+      });
+
+      // Réorganiser la disposition de la grille
+      arrangeProjectsGrid();
+    }, 400); // Attendre que l'animation de disparition soit complète
+  }
+
+  // Fonction pour réinitialiser tous les filtres
+  function resetFilters() {
+    techFilter.value = "all";
+    typeFilter.value = "all";
+    dateFilter.value = "all";
+
+    projects.forEach((project) => {
+      project.classList.remove("fade-out");
+      project.classList.add("fade-in");
+      project.style.display = "flex";
+    });
+
+    arrangeProjectsGrid();
+  }
+
+  // Fonction pour réarranger la grille des projets
+  function arrangeProjectsGrid() {
+    const sections = document.querySelectorAll(
+      "section[id^='realisations-'], section[id^='projets-']"
+    );
+
+    // Vérifier si des projets sont visibles
+    let totalVisibleProjects = 0;
+
+    sections.forEach((section) => {
+      const container = section.querySelector(".projects-container");
+      const visibleProjects = Array.from(
+        container.querySelectorAll(".project")
+      ).filter((p) => p.style.display !== "none");
+
+      totalVisibleProjects += visibleProjects.length;
+
+      // Afficher ou masquer les sections en fonction de si elles ont des projets visibles
+      if (visibleProjects.length === 0) {
+        section.style.display = "none";
+      } else {
+        section.style.display = "block";
+
+        // Réorganiser les projets visibles dans leur conteneur selon leur ordre dans le DOM
+        if (dateFilter.value !== "all") {
+          // Trié par date, donc on remet les projets dans le conteneur dans le bon ordre
+          visibleProjects.forEach((project) => {
+            container.appendChild(project);
+          });
+        }
+      }
+    });
+
+    // Vérifier si aucun projet n'est visible
+    if (totalVisibleProjects === 0) {
+      // Créer ou afficher un message "Aucun résultat"
+      let noResultsMsg = document.querySelector(".no-results-message");
+
+      if (!noResultsMsg) {
+        noResultsMsg = document.createElement("div");
+        noResultsMsg.className = "no-results-message";
+        noResultsMsg.innerHTML =
+          "<p>Aucun projet ne correspond à ces critères de filtrage.</p>";
+        document.querySelector("main .container").appendChild(noResultsMsg);
+      } else {
+        noResultsMsg.style.display = "block";
+      }
+    } else {
+      // Cacher le message "Aucun résultat" s'il existe
+      const noResultsMsg = document.querySelector(".no-results-message");
+      if (noResultsMsg) {
+        noResultsMsg.style.display = "none";
+      }
+    }
+  }
+
+  // Ajouter les listeners pour les changements de filtres
+  techFilter.addEventListener("change", applyFilters);
+  typeFilter.addEventListener("change", applyFilters);
+  dateFilter.addEventListener("change", applyFilters);
+  resetFiltersBtn.addEventListener("click", resetFilters);
 });

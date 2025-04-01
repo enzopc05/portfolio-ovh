@@ -81,20 +81,45 @@
     <main>
       <div class="container">
         <div class="filter-container">
-          <div class="select-wrapper">
-            <select id="techFilter" class="tech-select">
-              <option value="all">Filtrer par technologie</option>
-              <option value="python">Python</option>
-              <option value="javascript">JavaScript</option>
-              <option value="html">HTML/CSS</option>
-              <option value="java">Java</option>
-              <option value="javafx">JavaFX</option>
-              <option value="vba">VBA</option>
-              <option value="vb6">VB6</option>
-              <option value="xml">XML</option>
-              <option value="react">React</option>
-              <option value="django">Django</option>
-            </select>
+          <div class="filter-group">
+            <div class="select-wrapper">
+              <select id="techFilter" class="filter-select">
+                <option value="all">Toutes technologies</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML/CSS</option>
+                <option value="java">Java</option>
+                <option value="javafx">JavaFX</option>
+                <option value="vba">VBA</option>
+                <option value="vb6">VB6</option>
+                <option value="xml">XML</option>
+                <option value="react">React</option>
+                <option value="django">Django</option>
+                <option value="sql">SQL</option>
+                <option value="csharp">C#</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <select id="typeFilter" class="filter-select">
+                <option value="all">Tous types</option>
+                <option value="ecole">Projet École</option>
+                <option value="entreprise">Projet Entreprise</option>
+                <option value="personnel">Projet Personnel</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <select id="dateFilter" class="filter-select">
+                <option value="all">Toutes dates</option>
+                <option value="recent">Plus récents</option>
+                <option value="old">Plus anciens</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-reset">
+            <button id="resetFilters">Réinitialiser les filtres</button>
           </div>
         </div>
         <!-- Réalisations École -->
@@ -102,7 +127,12 @@
           <h2 class="section-title">Réalisations École</h2>
           <!-- Conteneur des projets école -->
           <div class="projects-container">
-            <article class="project" data-tech="python javascript html django">
+            <article
+              class="project"
+              data-tech="python javascript html django"
+              data-type="ecole"
+              data-date="2024-12"
+            >
               <h3>Les4Fantastiques</h3>
               <div class="project-image-container">
                 <img
@@ -113,7 +143,12 @@
               <p>Requête à l'API Marvel afin d'avoir des résultats visuels</p>
               <button class="btn" data-modal="modal1">En savoir plus</button>
             </article>
-            <article class="project" data-tech="java javafx">
+            <article
+              class="project"
+              data-tech="java javafx"
+              data-type="ecole"
+              data-date="2025-04"
+            >
               <h3>GhostTrack</h3>
               <div class="project-image-container">
                 <img
@@ -127,6 +162,8 @@
             <article
               class="project"
               data-tech="python html css javascript django sql"
+              data-type="ecole"
+              data-date="2025-04"
             >
               <h3>JO Ticket</h3>
               <div class="project-image-container">
@@ -144,12 +181,14 @@
             </article>
             <article
               class="project"
-              data-tech="react Express html css javascript"
+              data-tech="react express html css javascript"
+              data-type="ecole"
+              data-date="2025-04"
             >
               <h3>gestEPI</h3>
               <div class="project-image-container">
                 <img
-                  alt="Image du projet école 3"
+                  alt="Image du projet école 4"
                   src="Portfolio/picture/climbing-4514507_1280.jpg"
                 />
               </div>
@@ -166,7 +205,12 @@
           <h2 class="section-title">Réalisations Entreprise</h2>
           <!-- Conteneur des projets entreprise -->
           <div class="projects-container">
-            <article class="project" data-tech="vba">
+            <article
+              class="project"
+              data-tech="vba"
+              data-type="entreprise"
+              data-date="2024-09"
+            >
               <h3>Macro EXCEL</h3>
               <div class="project-image-container">
                 <img
@@ -177,7 +221,12 @@
               <p>Amélioration d'une macro EXCEL</p>
               <button class="btn" data-modal="modal3">En savoir plus</button>
             </article>
-            <article class="project" data-tech="vb6 python xml">
+            <article
+              class="project"
+              data-tech="vb6 python xml"
+              data-type="entreprise"
+              data-date="2024-11"
+            >
               <h3>API Amazon</h3>
               <div class="project-image-container">
                 <img
@@ -189,7 +238,12 @@
               <button class="btn" data-modal="modal4">En savoir plus</button>
             </article>
 
-            <article class="project" data-tech="csharp sql">
+            <article
+              class="project"
+              data-tech="csharp sql"
+              data-type="entreprise"
+              data-date="2025-02"
+            >
               <h3>API POM</h3>
               <div class="project-image-container">
                 <img
@@ -200,11 +254,16 @@
               <p>Création d'une API</p>
               <button class="btn" data-modal="modal5">En savoir plus</button>
             </article>
-            <article class="project" data-tech="csharp sql">
+            <article
+              class="project"
+              data-tech="csharp sql"
+              data-type="entreprise"
+              data-date="2025-03"
+            >
               <h3>POM SAG</h3>
               <div class="project-image-container">
                 <img
-                  alt="Image du projet entreprise 1"
+                  alt="Image du projet entreprise 4"
                   src="Portfolio/picture/POM.jpg"
                 />
               </div>
@@ -215,11 +274,16 @@
               </p>
               <button class="btn" data-modal="modal9">En savoir plus</button>
             </article>
-            <article class="project" data-tech="vb6 sql">
+            <article
+              class="project"
+              data-tech="vb6 sql"
+              data-type="entreprise"
+              data-date="2025-03"
+            >
               <h3>Vérification numéro de traçabilité</h3>
               <div class="project-image-container">
                 <img
-                  alt="Image du projet entreprise 1"
+                  alt="Image du projet entreprise 5"
                   src="Portfolio/picture/POM.jpg"
                 />
               </div>
@@ -228,6 +292,52 @@
                 numéro de traçabilité sur la base de plusieurs critères
               </p>
               <button class="btn" data-modal="modal10">En savoir plus</button>
+            </article>
+          </div>
+        </section>
+
+        <!-- Projets Personnels -->
+        <section id="projets-personnels">
+          <h2 class="section-title">Projets Personnels</h2>
+          <!-- Conteneur des projets personnels -->
+          <div class="projects-container">
+            <article
+              class="project"
+              data-tech="python django"
+              data-type="personnel"
+              data-date="2024-01"
+            >
+              <h3>Bot Discord</h3>
+              <div class="project-image-container">
+                <img
+                  alt="Image du projet personnel 1"
+                  src="Portfolio/picture/discord-bot.jpg"
+                />
+              </div>
+              <p>
+                Développement d'un bot Discord pour la gestion des rôles et des
+                événements
+              </p>
+              <button class="btn" data-modal="modal11">En savoir plus</button>
+            </article>
+
+            <article
+              class="project"
+              data-tech="javascript html css"
+              data-type="personnel"
+              data-date="2023-09"
+            >
+              <h3>Portfolio JavaScript</h3>
+              <div class="project-image-container">
+                <img
+                  alt="Image du projet personnel 2"
+                  src="Portfolio/picture/portfolio-js.jpg"
+                />
+              </div>
+              <p>
+                Création d'un portfolio interactif avec animations JavaScript
+              </p>
+              <button class="btn" data-modal="modal12">En savoir plus</button>
             </article>
           </div>
         </section>
@@ -1118,5 +1228,6 @@
       </div>
     </div>
     <script src="Portfolio/dev-sheet/image-optimization.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>
   </body>
 </html>
