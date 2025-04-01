@@ -331,6 +331,27 @@ function setupDocumentSections() {
         url: "Portfolio/doc/EURO-XXX-IN-00X-A_Verification_traca_exo.pdf",
       },
     ],
+    // Dressing App - Projet Personnel
+    modal11: [
+      {
+        title: "Documentation - Dressing App",
+        description: "Guide développeur et manuel utilisateur",
+        type: "markdown",
+        url: "Portfolio/doc/dressing_app_readme.md",
+      },
+      {
+        title: "Captures d'écran de l'application",
+        description: "Interface et fonctionnalités principales",
+        type: "image",
+        url: "Portfolio/doc/dressing_app_screenshots.png",
+      },
+      {
+        title: "Architecture technique",
+        description: "Structure de l'application et flux de données",
+        type: "image",
+        url: "Portfolio/doc/dressing_app_architecture.png",
+      },
+    ],
 
     // Ajoutez d'autres projets selon vos besoins
   };
@@ -861,4 +882,31 @@ document.addEventListener("DOMContentLoaded", function () {
   typeFilter.addEventListener("change", applyFilters);
   dateFilter.addEventListener("change", applyFilters);
   resetFiltersBtn.addEventListener("click", resetFilters);
+});
+
+// Fonction pour récupérer les paramètres de l'URL
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Appliquer le filtre de l'URL au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+  const techFilter = document.getElementById('techFilter');
+  const tech = getUrlParameter('tech');
+  
+  if (tech && techFilter) {
+    // Vérifier si la valeur existe dans les options du filtre
+    for(let i = 0; i < techFilter.options.length; i++) {
+      if (techFilter.options[i].value === tech.toLowerCase()) {
+        techFilter.value = tech.toLowerCase();
+        // Déclencher l'événement change pour appliquer le filtre
+        const event = new Event('change');
+        techFilter.dispatchEvent(event);
+        break;
+      }
+    }
+  }
 });

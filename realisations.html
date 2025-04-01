@@ -297,47 +297,29 @@
         </section>
 
         <!-- Projets Personnels -->
+
         <section id="projets-personnels">
           <h2 class="section-title">Projets Personnels</h2>
           <!-- Conteneur des projets personnels -->
           <div class="projects-container">
             <article
               class="project"
-              data-tech="python django"
+              data-tech="react javascript html css"
               data-type="personnel"
-              data-date="2024-01"
+              data-date="2024-02"
             >
-              <h3>Bot Discord</h3>
+              <h3>Dressing App</h3>
               <div class="project-image-container">
                 <img
-                  alt="Image du projet personnel 1"
-                  src="Portfolio/picture/discord-bot.jpg"
+                  alt="Image de la Dressing App"
+                  src="Portfolio/picture/dressingapp.png"
                 />
               </div>
               <p>
-                Développement d'un bot Discord pour la gestion des rôles et des
-                événements
+                Application web permettant de gérer sa garde-robe et de créer
+                des tenues personnalisées
               </p>
               <button class="btn" data-modal="modal11">En savoir plus</button>
-            </article>
-
-            <article
-              class="project"
-              data-tech="javascript html css"
-              data-type="personnel"
-              data-date="2023-09"
-            >
-              <h3>Portfolio JavaScript</h3>
-              <div class="project-image-container">
-                <img
-                  alt="Image du projet personnel 2"
-                  src="Portfolio/picture/portfolio-js.jpg"
-                />
-              </div>
-              <p>
-                Création d'un portfolio interactif avec animations JavaScript
-              </p>
-              <button class="btn" data-modal="modal12">En savoir plus</button>
             </article>
           </div>
         </section>
@@ -504,9 +486,8 @@
     <div class="modal" id="modal7">
       <div class="modal-content">
         <span class="close">×</span>
-        <h2>Détails du Projet</h2>
+        <h2>JO Ticket - Application de billetterie</h2>
         <div class="project-info">
-          <!-- Participants -->
           <div class="project-detail">
             <img
               alt="Participants"
@@ -515,7 +496,6 @@
             />
             <p>1 Participant</p>
           </div>
-          <!-- Technologies utilisées -->
           <div class="project-detail">
             <img
               alt="Technologies"
@@ -527,19 +507,60 @@
               <i class="devicon-html5-plain colored language-logo"></i>
               <i class="devicon-css3-plain colored language-logo"></i>
               <i class="devicon-javascript-plain colored language-logo"></i>
+              <i class="devicon-django-plain colored language-logo"></i>
+              <i class="devicon-mysql-plain colored language-logo"></i>
             </div>
           </div>
-          <!-- Durée du projet -->
           <div class="project-detail">
             <img
               alt="Durée"
               class="icon"
               src="Portfolio/picture/horlogelogo-removebg-preview.png"
             />
-            <p>En cours</p>
+            <p>3 mois</p>
           </div>
         </div>
-        <p>Informations détaillées sur le projet réalisé en entreprise.</p>
+        <div class="project-description">
+          <p>
+            JO Ticket est un système de billetterie complet développé pour les
+            Jeux Olympiques, comprenant trois applications :
+          </p>
+          <ul>
+            <li>
+              <strong>Application d'administration :</strong> Interface de
+              gestion des événements, des sites, des billets et des statistiques
+              de vente.
+            </li>
+            <li>
+              <strong>Application mobile :</strong> Permet aux utilisateurs de
+              parcourir les événements, d'acheter des billets et de gérer leur
+              compte.
+            </li>
+            <li>
+              <strong>Scanner de billets :</strong> Application pour le contrôle
+              d'accès et la validation des QR codes présents sur les billets.
+            </li>
+          </ul>
+          <h3>Fonctionnalités principales</h3>
+          <ul>
+            <li>
+              Système d'authentification sécurisé avec différents niveaux
+              d'accès
+            </li>
+            <li>Gestion complète du cycle de vie des billets</li>
+            <li>Génération et vérification de QR codes</li>
+            <li>Interface responsive adaptée aux différents appareils</li>
+            <li>Système de notification pour les événements à venir</li>
+            <li>Tableau de bord analytique pour les administrateurs</li>
+          </ul>
+          <h3>Technologies utilisées</h3>
+          <p>
+            L'application a été développée avec Django, un framework Python,
+            pour le backend et JavaScript/HTML/CSS pour le frontend. La base de
+            données MySQL stocke les informations sur les événements, les
+            utilisateurs et les transactions.
+          </p>
+        </div>
         <div class="documents-section">
           <h3>Accéder aux Documents</h3>
           <p>
@@ -547,24 +568,28 @@
             projet.
           </p>
           <input
-            id="password_modal4"
+            id="password_modal7"
             placeholder="Mot de passe"
             type="password"
-          /><button
-            onclick="validatePassword('password_modal4', 'docs_modal4')"
-          >
+          />
+          <button onclick="validatePassword('password_modal7', 'docs_modal7')">
             Valider
           </button>
-          <div id="docs_modal4" style="display: none; margin-top: 20px">
+          <div id="docs_modal7" style="display: none; margin-top: 20px">
             <h4>Documents disponibles</h4>
             <p>
-              <a href="path/to/modal4_doc1.pdf" target="_blank"
-                >Télécharger le document 1 - API Amazon</a
+              <a href="Portfolio/doc/README_JO.md" target="_blank"
+                >Documentation - Projet JO Ticket</a
               >
             </p>
             <p>
-              <a href="path/to/modal4_doc2.pdf" target="_blank"
-                >Télécharger le document 2 - API Amazon</a
+              <a href="Portfolio/doc/data_jo.sql" target="_blank"
+                >Base de données - Projet JO Ticket</a
+              >
+            </p>
+            <p>
+              <a href="Portfolio/doc/Schema_Projet_JO.png" target="_blank"
+                >Schéma d'architecture - Projet JO Ticket</a
               >
             </p>
           </div>
@@ -576,10 +601,8 @@
     <div class="modal" id="modal8">
       <div class="modal-content">
         <span class="close">×</span>
-        <h2>Détails du Projet</h2>
-        <!-- Informations supplémentaires -->
+        <h2>gestEPI - Gestion des Équipements de Protection Individuelle</h2>
         <div class="project-info">
-          <!-- Participants -->
           <div class="project-detail">
             <img
               alt="Participants"
@@ -588,7 +611,6 @@
             />
             <p>1 Participant</p>
           </div>
-          <!-- Technologies utilisées -->
           <div class="project-detail">
             <img
               alt="Technologies"
@@ -596,12 +618,14 @@
               src="Portfolio/picture/ordi-removebg-preview.png"
             />
             <div class="languages-used">
-              <i class="devicon-python-plain colored language-logo"></i>
+              <i class="devicon-react-original colored language-logo"></i>
+              <i class="devicon-express-original colored language-logo"></i>
               <i class="devicon-javascript-plain colored language-logo"></i>
               <i class="devicon-html5-plain colored language-logo"></i>
+              <i class="devicon-css3-plain colored language-logo"></i>
+              <i class="devicon-mongodb-plain colored language-logo"></i>
             </div>
           </div>
-          <!-- Durée du projet -->
           <div class="project-detail">
             <img
               alt="Durée"
@@ -611,7 +635,71 @@
             <p>4 mois</p>
           </div>
         </div>
-        <p>Informations détaillées sur le projet réalisé à l'école.</p>
+        <div class="project-description">
+          <p>
+            GestEPI est une application web complète pour la gestion des
+            Équipements de Protection Individuelle (EPI) utilisés dans le cadre
+            de l'escalade. Ce projet répond aux besoins des clubs d'escalade qui
+            doivent assurer un suivi rigoureux de leurs équipements pour
+            garantir la sécurité des pratiquants.
+          </p>
+
+          <h3>Fonctionnalités principales</h3>
+          <ul>
+            <li>
+              <strong>Inventaire des équipements :</strong> Catalogage complet
+              de tous les EPIs avec photos, spécifications et historique.
+            </li>
+            <li>
+              <strong>Système de prêt :</strong> Gestion des emprunts et retours
+              d'équipements avec signature électronique.
+            </li>
+            <li>
+              <strong>Suivi des inspections :</strong> Planification et
+              documentation des contrôles de sécurité périodiques.
+            </li>
+            <li>
+              <strong>Alertes automatiques :</strong> Notifications pour les
+              échéances d'inspection et les fins de vie des équipements.
+            </li>
+            <li>
+              <strong>Rapports et statistiques :</strong> Tableaux de bord pour
+              le suivi de l'utilisation et de l'état des équipements.
+            </li>
+            <li>
+              <strong>Gestion des utilisateurs :</strong> Différents niveaux
+              d'accès pour les administrateurs, gestionnaires et membres.
+            </li>
+          </ul>
+
+          <h3>Architecture technique</h3>
+          <p>Le projet utilise une stack MERN complète :</p>
+          <ul>
+            <li>
+              <strong>Frontend :</strong> React avec des composants modernes et
+              une interface responsive.
+            </li>
+            <li>
+              <strong>Backend :</strong> Express.js sur Node.js pour les API
+              RESTful.
+            </li>
+            <li>
+              <strong>Base de données :</strong> MongoDB pour un stockage
+              flexible des données.
+            </li>
+            <li>
+              <strong>Authentification :</strong> JWT (JSON Web Tokens) pour la
+              gestion sécurisée des sessions.
+            </li>
+          </ul>
+
+          <p>
+            Cette application a été conçue avec une attention particulière à
+            l'expérience utilisateur, permettant une prise en main rapide et une
+            utilisation intuitive même pour les utilisateurs peu familiers avec
+            l'informatique.
+          </p>
+        </div>
         <div class="documents-section">
           <h3>Accéder aux Documents</h3>
           <p>
@@ -619,41 +707,23 @@
             projet.
           </p>
           <input
-            id="password_modal1"
+            id="password_modal8"
             placeholder="Mot de passe"
             type="password"
-          /><button
-            onclick="validatePassword('password_modal1', 'docs_modal1')"
-          >
+          />
+          <button onclick="validatePassword('password_modal8', 'docs_modal8')">
             Valider
           </button>
-          <div id="docs_modal1" style="display: none; margin-top: 20px">
+          <div id="docs_modal8" style="display: none; margin-top: 20px">
             <h4>Documents disponibles</h4>
             <p>
-              <a href="Portfolio/doc/README.md" target="_blank"
-                >Télécharger le README - API Marvel</a
-              >
-            </p>
-
-            <p>
-              <a href="Portfolio/doc/Cahier des charges.pdf" target="_blank"
-                >Télécharger le cahier des charges - API Marvel</a
-              >
-            </p>
-
-            <p>
-              <a href="Portfolio/doc/Charte Graphique.pdf" target="_blank"
-                >Télécharger la chartes graphiques - API Marvel</a
+              <a href="Portfolio/doc/gestEPI_documentation.pdf" target="_blank"
+                >Documentation technique - gestEPI</a
               >
             </p>
             <p>
-              <a href="Portfolio/doc/les4fantastiques.sql" target="_blank"
-                >Télécharger la BDD - API Marvel</a
-              >
-            </p>
-            <p>
-              <a href="Portfolio/doc/Diagramme BDD.png" target="_blank"
-                >Télécharger le diagramme de BDD - API Marvel</a
+              <a href="Portfolio/doc/gestEPI_schema.png" target="_blank"
+                >Schéma d'architecture - gestEPI</a
               >
             </p>
           </div>
@@ -777,7 +847,7 @@
               class="icon"
               src="Portfolio/picture/horlogelogo-removebg-preview.png"
             />
-            <p>En cours</p>
+            <p>Annulé</p>
           </div>
         </div>
         <p>Informations détaillées sur le projet réalisé en entreprise.</p>
@@ -930,9 +1000,8 @@
     <div class="modal" id="modal9">
       <div class="modal-content">
         <span class="close">×</span>
-        <h2>Détails du Projet</h2>
+        <h2>POM SAG - Transfert de données logistiques</h2>
         <div class="project-info">
-          <!-- Participants -->
           <div class="project-detail">
             <img
               alt="Participants"
@@ -941,7 +1010,6 @@
             />
             <p>1 Participant</p>
           </div>
-          <!-- Technologies utilisées -->
           <div class="project-detail">
             <img
               alt="Technologies"
@@ -949,30 +1017,87 @@
               src="Portfolio/picture/ordi-removebg-preview.png"
             />
             <div class="languages-used">
-              <img
-                alt="VBA Logo"
-                class="language-logo"
-                src="Portfolio/picture/vbalogo-removebg-preview.png "
-              />
+              <i class="devicon-csharp-plain colored language-logo"></i>
+              <i class="devicon-mysql-plain colored language-logo"></i>
             </div>
           </div>
-          <!-- Durée du projet -->
           <div class="project-detail">
             <img
               alt="Durée"
               class="icon"
               src="Portfolio/picture/horlogelogo-removebg-preview.png"
             />
-            <p>1 semaine</p>
+            <p>2 mois</p>
           </div>
         </div>
-        <p>
-          Ce projet consiste à développer une macro VBA permettant d'extraire et
-          de présenter des données depuis une base de données SQL dans un
-          tableau Excel. L'objectif principal est de simplifier l'accès aux
-          informations critiques relatives aux articles et de les rendre
-          facilement exploitables par les utilisateurs via un fichier Excel.
-        </p>
+        <div class="project-description">
+          <p>
+            POM SAG est un logiciel de transfert de données développé pour
+            Eurodislog, permettant de synchroniser les informations entre
+            différentes plateformes de gestion logistique. Ce projet répond à un
+            besoin crucial d'interopérabilité entre les systèmes internes et les
+            outils des partenaires commerciaux.
+          </p>
+
+          <h3>Fonctionnalités principales</h3>
+          <ul>
+            <li>
+              <strong>Extraction automatisée :</strong> Récupération planifiée
+              des données depuis diverses sources.
+            </li>
+            <li>
+              <strong>Transformation et normalisation :</strong> Conversion des
+              formats de données pour assurer la compatibilité.
+            </li>
+            <li>
+              <strong>Chargement sécurisé :</strong> Insertion des données dans
+              les systèmes cibles avec vérification d'intégrité.
+            </li>
+            <li>
+              <strong>Journalisation complète :</strong> Suivi détaillé de
+              toutes les opérations pour faciliter le dépannage.
+            </li>
+            <li>
+              <strong>Interface d'administration :</strong> Console de gestion
+              pour configurer et surveiller les transferts.
+            </li>
+            <li>
+              <strong>Notifications d'erreurs :</strong> Alertes en cas d'échec
+              ou d'anomalies dans les données.
+            </li>
+          </ul>
+
+          <h3>Architecture technique</h3>
+          <p>
+            L'application a été développée en C# .NET avec une architecture
+            modulaire :
+          </p>
+          <ul>
+            <li>
+              <strong>API REST :</strong> Interface principale pour la
+              communication entre systèmes.
+            </li>
+            <li>
+              <strong>Moteur ETL :</strong> Gestion des processus d'extraction,
+              transformation et chargement.
+            </li>
+            <li>
+              <strong>Service Windows :</strong> Automatisation des tâches en
+              arrière-plan.
+            </li>
+            <li>
+              <strong>Base de données SQL :</strong> Stockage des données de
+              configuration et de journalisation.
+            </li>
+          </ul>
+
+          <p>
+            Ce projet a permis d'optimiser significativement les processus
+            logistiques d'Eurodislog en réduisant les erreurs de saisie et en
+            accélérant les échanges de données entre les différentes entités du
+            groupe.
+          </p>
+        </div>
         <div class="documents-section">
           <h3>Accéder aux Documents</h3>
           <p>
@@ -980,24 +1105,23 @@
             projet.
           </p>
           <input
-            id="password_modal3"
+            id="password_modal9"
             placeholder="Mot de passe"
             type="password"
-          /><button
-            onclick="validatePassword('password_modal3', 'docs_modal3')"
-          >
+          />
+          <button onclick="validatePassword('password_modal9', 'docs_modal9')">
             Valider
           </button>
-          <div id="docs_modal3" style="display: none; margin-top: 20px">
+          <div id="docs_modal9" style="display: none; margin-top: 20px">
             <h4>Documents disponibles</h4>
             <p>
-              <a href="path/to/modal3_doc1.pdf" target="_blank"
-                >Télécharger le document 1 - Macro EXCEL</a
+              <a href="Portfolio/doc/README_POM-SAG.md" target="_blank"
+                >Documentation - POM SAG</a
               >
             </p>
             <p>
-              <a href="path/to/modal3_doc2.pdf" target="_blank"
-                >Télécharger le document 2 - Macro EXCEL</a
+              <a href="Portfolio/doc/schémaProjetPOM.png" target="_blank"
+                >Schéma d'architecture - POM SAG</a
               >
             </p>
           </div>
@@ -1009,9 +1133,8 @@
     <div class="modal" id="modal10">
       <div class="modal-content">
         <span class="close">×</span>
-        <h2>Détails du Projet</h2>
+        <h2>Vérification numéro de traçabilité - Gestion logistique</h2>
         <div class="project-info">
-          <!-- Participants -->
           <div class="project-detail">
             <img
               alt="Participants"
@@ -1020,7 +1143,6 @@
             />
             <p>1 Participant</p>
           </div>
-          <!-- Technologies utilisées -->
           <div class="project-detail">
             <img
               alt="Technologies"
@@ -1029,29 +1151,87 @@
             />
             <div class="languages-used">
               <img
-                alt="VBA Logo"
+                alt="VB6 Logo"
                 class="language-logo"
-                src="Portfolio/picture/vbalogo-removebg-preview.png "
+                src="Portfolio/picture/vb6-removebg-preview.png"
               />
+              <i class="devicon-mysql-plain colored language-logo"></i>
             </div>
           </div>
-          <!-- Durée du projet -->
           <div class="project-detail">
             <img
               alt="Durée"
               class="icon"
               src="Portfolio/picture/horlogelogo-removebg-preview.png"
             />
-            <p>1 semaine</p>
+            <p>3 semaines</p>
           </div>
         </div>
-        <p>
-          Ce projet consiste à développer une macro VBA permettant d'extraire et
-          de présenter des données depuis une base de données SQL dans un
-          tableau Excel. L'objectif principal est de simplifier l'accès aux
-          informations critiques relatives aux articles et de les rendre
-          facilement exploitables par les utilisateurs via un fichier Excel.
-        </p>
+        <div class="project-description">
+          <p>
+            Cette application développée pour Eurodislog permet de vérifier et
+            modifier les numéros de traçabilité des produits logistiques selon
+            différents critères. Ce système est crucial pour maintenir
+            l'intégrité des chaînes d'approvisionnement et respecter les normes
+            de qualité et de sécurité.
+          </p>
+
+          <h3>Fonctionnalités principales</h3>
+          <ul>
+            <li>
+              <strong>Validation des numéros de traçabilité :</strong>
+              Vérification de la conformité selon les règles métier spécifiques.
+            </li>
+            <li>
+              <strong>Détection des anomalies :</strong> Identification des
+              incohérences dans les données de traçabilité.
+            </li>
+            <li>
+              <strong>Modification en masse :</strong> Interface pour corriger
+              plusieurs numéros simultanément.
+            </li>
+            <li>
+              <strong>Historique des modifications :</strong> Journal des
+              changements avec horodatage et utilisateur.
+            </li>
+            <li>
+              <strong>Rapports personnalisables :</strong> Extraction de données
+              filtrées pour analyse.
+            </li>
+            <li>
+              <strong>Intégration avec le WMS :</strong> Synchronisation avec le
+              système de gestion d'entrepôt.
+            </li>
+          </ul>
+
+          <h3>Défis techniques</h3>
+          <p>Le projet a présenté plusieurs défis techniques intéressants :</p>
+          <ul>
+            <li>
+              <strong>Compatibilité avec les systèmes existants :</strong>
+              Intégration avec une infrastructure vieillissante mais critique.
+            </li>
+            <li>
+              <strong>Performance optimisée :</strong> Traitement efficace de
+              grandes quantités de données.
+            </li>
+            <li>
+              <strong>Interface utilisateur intuitive :</strong> Conception
+              adaptée aux contraintes des environnements d'entrepôt.
+            </li>
+            <li>
+              <strong>Validation complexe :</strong> Implémentation de règles de
+              validation spécifiques au secteur logistique.
+            </li>
+          </ul>
+
+          <p>
+            Ce logiciel a permis d'améliorer la fiabilité du système de
+            traçabilité d'Eurodislog tout en réduisant significativement le
+            temps nécessaire pour identifier et corriger les erreurs dans les
+            numéros de traçabilité.
+          </p>
+        </div>
         <div class="documents-section">
           <h3>Accéder aux Documents</h3>
           <p>
@@ -1059,24 +1239,202 @@
             projet.
           </p>
           <input
-            id="password_modal3"
+            id="password_modal10"
             placeholder="Mot de passe"
             type="password"
-          /><button
-            onclick="validatePassword('password_modal3', 'docs_modal3')"
+          />
+          <button
+            onclick="validatePassword('password_modal10', 'docs_modal10')"
           >
             Valider
           </button>
-          <div id="docs_modal3" style="display: none; margin-top: 20px">
+          <div id="docs_modal10" style="display: none; margin-top: 20px">
             <h4>Documents disponibles</h4>
             <p>
-              <a href="path/to/modal3_doc1.pdf" target="_blank"
-                >Télécharger le document 1 - Macro EXCEL</a
+              <a href="Portfolio/doc/README_VerifTraca.md" target="_blank"
+                >Documentation - Vérification traçabilité</a
               >
             </p>
             <p>
-              <a href="path/to/modal3_doc2.pdf" target="_blank"
-                >Télécharger le document 2 - Macro EXCEL</a
+              <a
+                href="Portfolio/doc/EURO-XXX-IN-00X-A_Verification_traca_exo.pdf"
+                target="_blank"
+                >Manuel d'utilisation</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale pour Dressing App -->
+    <div class="modal" id="modal11">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Dressing App - Gestionnaire de garde-robe intelligent</h2>
+        <div class="project-info">
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="Portfolio/picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participant</p>
+          </div>
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="Portfolio/picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <i class="devicon-react-original colored language-logo"></i>
+              <i class="devicon-javascript-plain colored language-logo"></i>
+              <i class="devicon-html5-plain colored language-logo"></i>
+              <i class="devicon-css3-plain colored language-logo"></i>
+            </div>
+          </div>
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="Portfolio/picture/horlogelogo-removebg-preview.png"
+            />
+            <p>3 mois (temps partiel)</p>
+          </div>
+        </div>
+        <div class="project-description">
+          <p>
+            Dressing App est une application mobile développée en React Native
+            qui permet aux utilisateurs de numériser leur garde-robe, de
+            cataloguer leurs vêtements et d'obtenir des suggestions de tenues
+            adaptées à différentes occasions.
+          </p>
+
+          <h3>Fonctionnalités principales</h3>
+          <ul>
+            <li>
+              <strong>Numérisation des vêtements :</strong> Ajout de vêtements
+              via l'appareil photo ou la galerie avec catégorisation
+              automatique.
+            </li>
+            <li>
+              <strong>Gestion de la garde-robe :</strong> Organisation des
+              vêtements par catégorie, couleur, saison et occasion.
+            </li>
+            <li>
+              <strong>Création de tenues :</strong> Interface intuitive pour
+              assembler des vêtements en tenues complètes.
+            </li>
+            <li>
+              <strong>Suggestions intelligentes :</strong> Propositions de
+              tenues basées sur la météo, l'occasion et les préférences de
+              l'utilisateur.
+            </li>
+            <li>
+              <strong>Planification vestimentaire :</strong> Calendrier pour
+              planifier les tenues à l'avance.
+            </li>
+            <li>
+              <strong>Mode hors ligne :</strong> Fonctionnalités principales
+              accessibles sans connexion internet.
+            </li>
+          </ul>
+
+          <h3>Technologies utilisées</h3>
+          <p>Cette application a été développée avec :</p>
+          <ul>
+            <li>
+              <strong>React Native :</strong> Pour le développement
+              cross-platform iOS et Android.
+            </li>
+            <li>
+              <strong>Expo :</strong> Pour simplifier le développement et
+              l'accès aux API natives.
+            </li>
+            <li>
+              <strong>Redux :</strong> Pour la gestion de l'état global de
+              l'application.
+            </li>
+            <li>
+              <strong>AsyncStorage :</strong> Pour la persistance des données
+              locales.
+            </li>
+            <li>
+              <strong>API Camera et Image Picker :</strong> Pour la capture et
+              la sélection d'images.
+            </li>
+            <li>
+              <strong>React Navigation :</strong> Pour la navigation entre les
+              écrans.
+            </li>
+          </ul>
+
+          <h3>Défis et apprentissages</h3>
+          <p>
+            Ce projet m'a permis d'approfondir mes compétences en développement
+            mobile et de relever plusieurs défis techniques :
+          </p>
+          <ul>
+            <li>
+              Conception d'une interface utilisateur intuitive pour la création
+              de tenues.
+            </li>
+            <li>
+              Implémentation d'une logique de suggestion basée sur plusieurs
+              critères.
+            </li>
+            <li>
+              Optimisation des performances avec une base de données d'images
+              croissante.
+            </li>
+            <li>
+              Gestion efficace de l'état de l'application à travers différents
+              écrans.
+            </li>
+          </ul>
+
+          <p>
+            Dressing App est actuellement en phase de test bêta et continue
+            d'évoluer avec l'ajout de nouvelles fonctionnalités comme le partage
+            social et l'intégration de l'intelligence artificielle pour des
+            recommandations de style plus personnalisées.
+          </p>
+        </div>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal11"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal11', 'docs_modal11')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal11" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="Portfolio/doc/dressing_app_readme.md" target="_blank"
+                >Documentation - Dressing App</a
+              >
+            </p>
+            <p>
+              <a
+                href="Portfolio/doc/dressing_app_screenshots.png"
+                target="_blank"
+                >Captures d'écran de l'application</a
+              >
+            </p>
+            <p>
+              <a
+                href="Portfolio/doc/dressing_app_architecture.png"
+                target="_blank"
+                >Architecture technique</a
               >
             </p>
           </div>

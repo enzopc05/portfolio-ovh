@@ -85,3 +85,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// Redirection vers la page de réalisations avec filtre
+document.addEventListener('DOMContentLoaded', function() {
+  // Sélectionner toutes les compétences cliquables
+  const skillItems = document.querySelectorAll('#skills .skill, #tools .tool, #frameworks .skill');
+  
+  // Ajouter un écouteur de clic à chaque compétence
+  skillItems.forEach(skill => {
+    // Ajouter la classe pour rendre l'élément cliquable visuellement
+    skill.classList.add('clickable-skill');
+    
+    // Ajouter l'écouteur de clic
+    skill.addEventListener('click', function() {
+      // Récupérer la technologie à partir de l'attribut data-tech ou du texte
+      const tech = this.getAttribute('data-tech') || this.querySelector('p').innerText.toLowerCase();
+      
+      // Rediriger vers la page de réalisations avec le filtre de technologie
+      window.location.href = `realisations.html?tech=${tech}`;
+    });
+  });
+});

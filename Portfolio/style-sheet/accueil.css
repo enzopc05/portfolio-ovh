@@ -1136,6 +1136,156 @@ strong {
   font-weight: bold;
 }
 
+
+/* Styles pour la section Frameworks */
+#frameworks {
+  background: #faf7f2; /* Même teinte douce que les autres sections */
+  border: 2px solid var(--color);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(182, 115, 50, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+#frameworks:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(182, 115, 50, 0.3);
+}
+
+#frameworks h2 {
+  color: var(--color);
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+#frameworks h2:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: var(--color);
+  bottom: 0;
+  left: 25%;
+}
+
+.frameworks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Mode nuit pour la section Frameworks */
+body.night-mode #frameworks {
+  background: #003366;
+  border-color: #4cadad;
+}
+
+body.night-mode #frameworks h2 {
+  color: #4cadad;
+}
+
+body.night-mode #frameworks h2:after {
+  background-color: #4cadad;
+}
+
+/* Responsive design pour la section Frameworks */
+@media (max-width: 991px) {
+  #frameworks {
+    padding: 20px;
+  }
+  
+  #frameworks h2 {
+    font-size: 1.5rem;
+  }
+  
+  .frameworks-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #frameworks {
+    padding: 20px;
+  }
+  
+  #frameworks h2 {
+    font-size: 1.4rem;
+  }
+  
+  .frameworks-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  #frameworks {
+    padding: 15px;
+  }
+  
+  #frameworks h2 {
+    font-size: 1.3rem;
+  }
+  
+  .frameworks-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 374px) {
+  #frameworks h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .frameworks-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Style pour indiquer que les compétences sont cliquables */
+.clickable-skill {
+  cursor: pointer;
+  position: relative;
+}
+
+.clickable-skill::after {
+  content: "Voir les projets";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.clickable-skill:hover::after {
+  opacity: 1;
+}
+
+/* Ajustement pour le mode nuit */
+body.night-mode .clickable-skill::after {
+  background-color: #4cadad;
+  color: #001f3f;
+}
+
 /* Style de base du bouton */
 .theme-toggle {
   background-color: #ffa500; /* Orange pour l'état par défaut */
