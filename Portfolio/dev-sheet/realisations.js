@@ -291,14 +291,44 @@ function setupDocumentSections() {
     ],
 
     // gestEPI - Projet École 4
-    modal8: [
-      {
-        title: "",
-        description: "",
-        type: "",
-        url: "",
-      },
-    ],
+modal8: [
+  {
+    title: "Documentation API - GestEPI",
+    description: "Documentation complète des endpoints de l'API REST de GestEPI",
+    type: "markdown",
+    url: "Portfolio/doc/API.md"
+  },
+  {
+    title: "Structure de base de données - GestEPI",
+    description: "Script SQL de création de la base de données",
+    type: "sql",
+    url: "Portfolio/doc/bdd_gestEPI.sql"
+  },
+  {
+    title: "Guide d'installation - GestEPI",
+    description: "Instructions détaillées pour installer et configurer l'application",
+    type: "markdown",
+    url: "Portfolio/doc/INSTALLATION.md"
+  },
+  {
+    title: "README - GestEPI",
+    description: "Présentation générale du projet et de ses fonctionnalités",
+    type: "markdown",
+    url: "Portfolio/doc/README_gestEPI.md"
+  },
+  {
+    title: "Manuel d'utilisation - GestEPI",
+    description: "Guide complet pour l'utilisation de l'application",
+    type: "markdown",
+    url: "Portfolio/doc/UTILISATION.md"
+  },
+  {
+    title: "Schéma de base de données - GestEPI",
+    description: "Diagramme des relations entre les tables",
+    type: "image",
+    url: "Portfolio/doc/schema_bdd_gestEPI.png"
+  }
+],
 
     // POM SAG - Projet Entreprise 4
     modal9: [

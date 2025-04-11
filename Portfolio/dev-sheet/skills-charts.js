@@ -116,12 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
             ticks: {
               stepSize: 1,
               callback: function (value) {
-                if (value === 0) return "Débutant";
-                if (value === 1) return "Notions";
-                if (value === 2) return "Basique";
-                if (value === 3) return "Intermédiaire";
-                if (value === 4) return "Avancé";
-                if (value === 5) return "Expert";
+                if (value === 0) return "Débutant (Niveau initial)";
+                if (value === 1) return "Notions (Progression 1)";
+                if (value === 2) return "Basique (Progression 2)";
+                if (value === 3) return "Intermédiaire (Progression 3)";
+                if (value === 4) return "Avancé (Progression 4)";
+                if (value === 5) return "Maîtrise (Progression max)";
                 return value;
               },
             },
@@ -138,17 +138,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (label) {
                   label += ": ";
                 }
-
+          
                 const value = context.raw;
                 let levelLabel;
-
-                if (value < 1) levelLabel = "Débutant";
-                else if (value < 2) levelLabel = "Notions";
-                else if (value < 3) levelLabel = "Basique";
-                else if (value < 4) levelLabel = "Intermédiaire";
-                else if (value < 5) levelLabel = "Avancé";
-                else levelLabel = "Expert";
-
+          
+                if (value < 1) levelLabel = "Débutant (Niveau initial)";
+                else if (value < 2) levelLabel = "Notions (Progression 1)";
+                else if (value < 3) levelLabel = "Basique (Progression 2)";
+                else if (value < 4) levelLabel = "Intermédiaire (Progression 3)";
+                else if (value < 5) levelLabel = "Avancé (Progression 4)";
+                else levelLabel = "Maîtrise (Progression max)";
+          
                 return label + value + " - " + levelLabel;
               },
             },
@@ -235,12 +235,12 @@ document.addEventListener("DOMContentLoaded", function () {
             ticks: {
               stepSize: 1,
               callback: function (value) {
-                if (value === 0) return "Débutant";
-                if (value === 1) return "Notions";
-                if (value === 2) return "Basique";
-                if (value === 3) return "Intermédiaire";
-                if (value === 4) return "Avancé";
-                if (value === 5) return "Expert";
+                if (value === 0) return "Débutant (Niveau initial)";
+                if (value === 1) return "Notions (Progression 1)";
+                if (value === 2) return "Basique (Progression 2)";
+                if (value === 3) return "Intermédiaire (Progression 3)";
+                if (value === 4) return "Avancé (Progression 4)";
+                if (value === 5) return "Maîtrise (Progression max)";
                 return value;
               },
             },
