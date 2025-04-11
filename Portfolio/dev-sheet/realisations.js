@@ -202,7 +202,25 @@ function setupDocumentSections() {
     // GhostTrack - Projet École 2
     modal2: [
       {
-        title: "Maquette - Projet AlerTrain",
+        title: "Cahier des charges - GhostTrack",
+        description: "Spécifications et exigences du projet",
+        type: "markdown",
+        url: "Portfolio/doc/Cahier_des_Charges (1).md",
+      },
+      {
+        title: "Maquette écrite - GhostTrack",
+        description: "Description textuelle des interfaces",
+        type: "markdown",
+        url: "Portfolio/doc/Maquette_Ecrite.md",
+      },
+      {
+        title: "README - GhostTrack",
+        description: "Présentation générale du projet",
+        type: "markdown",
+        url: "Portfolio/doc/README (1).md",
+      },
+      {
+        title: "Maquette visuelle - GhostTrack",
         description: "Prototype visuel de l'interface utilisateur",
         type: "image",
         url: "Portfolio/doc/Maquette (1).png",
@@ -291,44 +309,47 @@ function setupDocumentSections() {
     ],
 
     // gestEPI - Projet École 4
-modal8: [
-  {
-    title: "Documentation API - GestEPI",
-    description: "Documentation complète des endpoints de l'API REST de GestEPI",
-    type: "markdown",
-    url: "Portfolio/doc/API.md"
-  },
-  {
-    title: "Structure de base de données - GestEPI",
-    description: "Script SQL de création de la base de données",
-    type: "sql",
-    url: "Portfolio/doc/bdd_gestEPI.sql"
-  },
-  {
-    title: "Guide d'installation - GestEPI",
-    description: "Instructions détaillées pour installer et configurer l'application",
-    type: "markdown",
-    url: "Portfolio/doc/INSTALLATION.md"
-  },
-  {
-    title: "README - GestEPI",
-    description: "Présentation générale du projet et de ses fonctionnalités",
-    type: "markdown",
-    url: "Portfolio/doc/README_gestEPI.md"
-  },
-  {
-    title: "Manuel d'utilisation - GestEPI",
-    description: "Guide complet pour l'utilisation de l'application",
-    type: "markdown",
-    url: "Portfolio/doc/UTILISATION.md"
-  },
-  {
-    title: "Schéma de base de données - GestEPI",
-    description: "Diagramme des relations entre les tables",
-    type: "image",
-    url: "Portfolio/doc/schema_bdd_gestEPI.png"
-  }
-],
+    modal8: [
+      {
+        title: "Documentation API - GestEPI",
+        description:
+          "Documentation complète des endpoints de l'API REST de GestEPI",
+        type: "markdown",
+        url: "Portfolio/doc/API.md",
+      },
+      {
+        title: "Structure de base de données - GestEPI",
+        description: "Script SQL de création de la base de données",
+        type: "sql",
+        url: "Portfolio/doc/bdd_gestEPI.sql",
+      },
+      {
+        title: "Guide d'installation - GestEPI",
+        description:
+          "Instructions détaillées pour installer et configurer l'application",
+        type: "markdown",
+        url: "Portfolio/doc/INSTALLATION.md",
+      },
+      {
+        title: "README - GestEPI",
+        description:
+          "Présentation générale du projet et de ses fonctionnalités",
+        type: "markdown",
+        url: "Portfolio/doc/README_gestEPI.md",
+      },
+      {
+        title: "Manuel d'utilisation - GestEPI",
+        description: "Guide complet pour l'utilisation de l'application",
+        type: "markdown",
+        url: "Portfolio/doc/UTILISATION.md",
+      },
+      {
+        title: "Schéma de base de données - GestEPI",
+        description: "Diagramme des relations entre les tables",
+        type: "image",
+        url: "Portfolio/doc/schema_bdd_gestEPI.png",
+      },
+    ],
 
     // POM SAG - Projet Entreprise 4
     modal9: [
@@ -916,24 +937,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Fonction pour récupérer les paramètres de l'URL
 function getUrlParameter(name) {
-  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
   var results = regex.exec(location.search);
-  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  return results === null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 // Appliquer le filtre de l'URL au chargement de la page
-document.addEventListener('DOMContentLoaded', function() {
-  const techFilter = document.getElementById('techFilter');
-  const tech = getUrlParameter('tech');
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const techFilter = document.getElementById("techFilter");
+  const tech = getUrlParameter("tech");
+
   if (tech && techFilter) {
     // Vérifier si la valeur existe dans les options du filtre
-    for(let i = 0; i < techFilter.options.length; i++) {
+    for (let i = 0; i < techFilter.options.length; i++) {
       if (techFilter.options[i].value === tech.toLowerCase()) {
         techFilter.value = tech.toLowerCase();
         // Déclencher l'événement change pour appliquer le filtre
-        const event = new Event('change');
+        const event = new Event("change");
         techFilter.dispatchEvent(event);
         break;
       }
