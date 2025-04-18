@@ -104,3 +104,93 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Toggle Méthodologie de veille
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleMethodologyBtn = document.getElementById("toggleMethodology");
+  const methodologyContent = document.querySelector(".methodology-content");
+  
+  if (toggleMethodologyBtn) {
+    toggleMethodologyBtn.addEventListener("click", function() {
+      this.classList.toggle("active");
+      
+      if (methodologyContent.style.display === "none" || methodologyContent.style.display === "") {
+        methodologyContent.style.display = "block";
+        this.querySelector("i").classList.replace("fa-chevron-down", "fa-chevron-up");
+      } else {
+        methodologyContent.style.display = "none";
+        this.querySelector("i").classList.replace("fa-chevron-up", "fa-chevron-down");
+      }
+    });
+  }
+
+  // Filtrage par tags
+  const tagButtons = document.querySelectorAll(".tag-btn");
+  
+  tagButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      // Activer le bouton cliqué et désactiver les autres
+      tagButtons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+      
+      const selectedTag = this.getAttribute("data-tag");
+      filterArticlesByTag(selectedTag);
+    });
+  });
+
+  // Fonction de filtrage par tag
+  function filterArticlesByTag(tag) {
+    const articles = document.querySelectorAll(".article");
+    
+    articles.forEach(article => {
+      if (tag === "all" || article.getAttribute("data-tags").includes(tag)) {
+        article.style.display = "flex";
+      } else {
+        article.style.display = "none";
+      }
+    });
+  }
+
+  // Recherche d'articles
+  const searchBtn = document.getElementById("searchBtn");
+  const searchInput = document.getElementById("articleSearch");
+  
+  if (searchBtn && searchInput) {
+    searchBtn.addEventListener("click", searchArticles);
+    searchInput.addEventListener("keyup", function(e) {
+      if (e.key === "Enter") {
+        searchArticles();
+      }
+    });
+  }
+
+  // Fonction de recherche
+  function searchArticles() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const articles = document.querySelectorAll(".article");
+    
+    articles.forEach(article => {
+      const title = article.querySelector("h3").textContent.toLowerCase();
+      const content = article.querySelector(".article-detail").textContent.toLowerCase();
+      
+      if (title.includes(searchTerm) || content.includes(searchTerm)) {
+        article.style.display = "flex";
+      } else {
+        article.style.display = "none";
+      }
+    });
+  }
+
+  // Mise à jour de la fonction de tri pour activer/désactiver les boutons
+  document.getElementById("sortByDate").addEventListener("click", function() {
+    document.getElementById("sortByDate").classList.add("active");
+    document.getElementById("sortByNote").classList.remove("active");
+    sortArticles("date");
+  });
+
+  document.getElementById("sortByNote").addEventListener("click", function() {
+    document.getElementById("sortByDate").classList.remove("active");
+    document.getElementById("sortByNote").classList.add("active");
+    sortArticles("note");
+  });
+});

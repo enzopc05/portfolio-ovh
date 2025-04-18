@@ -2596,3 +2596,47 @@ body.night-mode .markdown-content code {
 body.night-mode .markdown-content pre {
   background-color: #001f3f;
 }
+
+
+/* Style pour l'indication GitHub */
+.github-detail {
+  background-color: #f0f3f6;
+  border-left: 4px solid #24292e !important;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.github-detail:hover {
+  background-color: #e1e4e8;
+}
+
+.github-icon {
+  font-size: 30px;
+  color: #24292e;
+  margin-right: 15px;
+}
+
+.github-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.github-label {
+  font-weight: 600;
+  color: #24292e;
+}
+
+/* Mode nuit pour l'indication GitHub */
+body.night-mode .github-detail {
+  background-color: #0d1117;
+  border-left-color: #8b949e !important;
+}
+
+body.night-mode .github-icon {
+  color: #8b949e;
+}
+
+body.night-mode .github-label {
+  color: #c9d1d9;
+}

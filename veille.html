@@ -83,15 +83,82 @@
           L'évolution du monde de la musique avec l'intelligence artificielle
         </h2>
 
-        <div class="sorting">
-          <button id="sortByDate">Trier par Date</button>
-          <button id="sortByNote">Trier par Note</button>
+        <div class="stats-section">
+          <h2>Statistiques de ma veille</h2>
+          <div class="stats-container">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-newspaper"></i>
+              </div>
+              <div class="stat-number">10</div>
+              <div class="stat-label">Articles analysés</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="stat-number">4.2</div>
+              <div class="stat-label">Note moyenne</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="stat-number">2024-2025</div>
+              <div class="stat-label">Période couverte</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="stat-number">4</div>
+              <div class="stat-label">Thèmes principaux</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-container">
+          <div class="sorting-section">
+            <button id="sortByDate" class="sort-btn active">
+              Trier par Date
+            </button>
+            <button id="sortByNote" class="sort-btn">Trier par Note</button>
+          </div>
+
+          <div class="filtering-section">
+            <h3>Filtrer par thème</h3>
+            <div class="filter-tags">
+              <button class="tag-btn active" data-tag="all">Tous</button>
+              <button class="tag-btn" data-tag="creation">IA & Création</button>
+              <button class="tag-btn" data-tag="industrie">
+                Impact sur l'industrie
+              </button>
+              <button class="tag-btn" data-tag="droits">Droits d'auteur</button>
+              <button class="tag-btn" data-tag="ethique">
+                Questions éthiques
+              </button>
+            </div>
+          </div>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="articleSearch"
+              placeholder="Rechercher un article..."
+            />
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+          </div>
         </div>
 
         <!-- Conteneur des articles de veille -->
         <div class="articles-container">
           <!-- Article 1 -->
-          <section class="article" data-date="2024-02-01" data-note="4">
+          <section
+            class="article"
+            data-date="2024-02-01"
+            data-note="4"
+            data-tags="creation ethique"
+          >
             <div>
               <h3>
                 Musique et intelligence artificielle : liaisons heureuses ou
@@ -129,7 +196,12 @@
           </section>
 
           <!-- Article 2 -->
-          <section class="article" data-date="2024-09-04" data-note="4.5">
+          <section
+            class="article"
+            data-date="2024-09-04"
+            data-note="4.5"
+            data-tags="creation industrie"
+          >
             <div>
               <h3>
                 L'intelligence artificielle dans la musique et sa révolution
@@ -165,7 +237,12 @@
           </section>
 
           <!-- Article 3 -->
-          <section class="article" data-date="2024-04-03" data-note="5">
+          <section
+            class="article"
+            data-date="2024-04-03"
+            data-note="5"
+            data-tags="creation industrie"
+          >
             <div>
               <h3>
                 La Musique et la Technologie : L’Impact des IA sur la Création
@@ -202,14 +279,19 @@
           </section>
 
           <!-- Article 4 -->
-          <section class="article" data-date="2024-10-13" data-note="5">
+          <section
+            class="article"
+            data-date="2024-10-13"
+            data-note="5"
+            data-tags="industrie creation"
+          >
             <div>
               <h3>
                 L'intelligence artificielle générative en observation au Marché
                 des musiques actuelles
               </h3>
               <img
-                src="Portfolio/picture/article4.webp"
+                src="Portfolio/picture/article 4.webp"
                 alt="Aperçu de l'article 4"
                 class="article-image"
               />
@@ -242,7 +324,12 @@
           </section>
 
           <!-- Article 5 -->
-          <section class="article" data-date="2024-05-22" data-note="4">
+          <section
+            class="article"
+            data-date="2024-05-22"
+            data-note="4"
+            data-tags="droits industrie"
+          >
             <div>
               <h3>
                 L'intelligence artificielle « menace l'avenir des créateurs »
@@ -282,7 +369,12 @@
           </section>
 
           <!-- Article 6 -->
-          <section class="article" data-date="2024-08-16" data-note="3">
+          <section
+            class="article"
+            data-date="2024-08-16"
+            data-note="3"
+            data-tags="creation industrie"
+          >
             <div>
               <h3>
                 IA : des résultats déjà stupéfiants dans l'image, la musique et
@@ -321,7 +413,12 @@
           </section>
 
           <!-- Article 7 -->
-          <section class="article" data-date="2025-02-09" data-note="5">
+          <section
+            class="article"
+            data-date="2025-02-09"
+            data-note="5"
+            data-tags="creation ethique pedagogie"
+          >
             <h3>Musique et Intelligence Artificielle – DRANE</h3>
             <img
               src="Portfolio/picture/article7.webp"
@@ -354,7 +451,12 @@
           </section>
 
           <!-- Article 8 -->
-          <section class="article" data-date="2025-01-24" data-note="4">
+          <section
+            class="article"
+            data-date="2025-01-24"
+            data-note="4"
+            data-tags="droits creation"
+          >
             <h3>
               L'intelligence artificielle en musique : opportunité ou menace
             </h3>
@@ -388,7 +490,12 @@
           </section>
 
           <!-- Article 9 -->
-          <section class="article" data-date="2025-01-19" data-note="4">
+          <section
+            class="article"
+            data-date="2025-01-19"
+            data-note="4"
+            data-tags="creation droits ethique"
+          >
             <h3>
               L'intelligence artificielle dans la musique : quand la machine
               défie la créativité humaine
@@ -421,10 +528,15 @@
             </p>
           </section>
           <!-- Article 10 -->
-          <section class="article" data-date="2025-01-05" data-note="3">
+          <section
+            class="article"
+            data-date="2025-01-05"
+            data-note="3"
+            data-tags="creation industrie"
+          >
             <h3>Intelligence artificielle et musique : une révolution ?</h3>
             <img
-              src="Portfolio/picture/article11.webp"
+              src="Portfolio/picture/article10.webp"
               alt="Aperçu de l'article Big média"
               class="article-image"
             />
@@ -450,6 +562,108 @@
               musique.
             </p>
           </section>
+        </div>
+      </div>
+
+      <div class="conclusion-section">
+        <h2>Analyse globale</h2>
+        <div class="conclusion-content">
+          <div class="conclusion-image">
+            <img
+              src="Portfolio/picture/ia-creativite-art-musique-design-blog-netione.webp"
+              alt="Concept IA et Musique"
+            />
+          </div>
+          <div class="conclusion-text">
+            <h3>
+              L'impact de l'IA sur le monde musical : opportunités et défis
+            </h3>
+
+            <p>
+              À travers ma veille technologique, plusieurs tendances majeures se
+              dégagent concernant l'évolution du monde de la musique avec
+              l'intelligence artificielle :
+            </p>
+
+            <div class="conclusion-points">
+              <div class="conclusion-point">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                  <h4>Innovation créative</h4>
+                  <p>
+                    L'IA s'impose comme un outil d'exploration créative
+                    permettant aux musiciens d'expérimenter de nouvelles
+                    sonorités et compositions. Des albums comme "Hello World" de
+                    SKYGGE démontrent que la collaboration homme-machine peut
+                    aboutir à des créations originales et innovantes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="conclusion-point">
+                <i class="fas fa-balance-scale"></i>
+                <div>
+                  <h4>Enjeux économiques et juridiques</h4>
+                  <p>
+                    La question des droits d'auteur reste centrale et
+                    problématique. Avec une potentielle baisse de 24% des
+                    revenus des créateurs d'ici 2028, l'industrie doit repenser
+                    ses modèles économiques et juridiques pour protéger les
+                    artistes tout en intégrant les innovations technologiques.
+                  </p>
+                </div>
+              </div>
+
+              <div class="conclusion-point">
+                <i class="fas fa-user-graduate"></i>
+                <div>
+                  <h4>Démocratisation de la création</h4>
+                  <p>
+                    L'IA rend la création musicale plus accessible aux personnes
+                    sans formation musicale formelle, ce qui pourrait élargir
+                    considérablement le bassin de créateurs mais pose également
+                    des questions sur la valeur attribuée au savoir-faire et à
+                    l'expertise des musiciens professionnels.
+                  </p>
+                </div>
+              </div>
+
+              <div class="conclusion-point">
+                <i class="fas fa-heart"></i>
+                <div>
+                  <h4>L'essence de la musique préservée</h4>
+                  <p>
+                    Malgré les avancées technologiques, l'émotion humaine reste
+                    au cœur de l'expérience musicale. L'IA apparaît comme un
+                    outil puissant mais qui ne remplace pas la sensibilité et
+                    l'intentionnalité humaines dans la création artistique.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="conclusion-perspective">
+              <h4>Perspective personnelle</h4>
+              <p>
+                Au terme de cette veille technologique, je considère que l'IA
+                représente une évolution majeure pour le secteur musical,
+                comparable à l'arrivée de l'enregistrement ou de la musique
+                numérique. En tant que professionnel de l'informatique, je suis
+                convaincu que la valeur réside dans la synergie entre
+                technologie et créativité humaine. Les développeurs ont la
+                responsabilité de concevoir des outils d'IA qui augmentent les
+                capacités des musiciens plutôt que de chercher à les remplacer.
+              </p>
+
+              <p>
+                L'avenir de la musique se situe probablement dans une approche
+                hybride où l'IA servira d'assistant créatif, permettant aux
+                artistes de se concentrer sur l'aspect le plus expressif et
+                émotionnel de leur art, tout en automatisant certains aspects
+                techniques de la production.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -485,7 +699,10 @@
         <div class="footer-social">
           <h3>Réseaux Sociaux</h3>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/enzo-pace-15811a266/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/enzo-pace-15811a266/"
+              target="_blank"
+            >
               <img
                 src="Portfolio/picture/logo-linkedin-noir.jpg"
                 alt="LinkedIn"

@@ -963,3 +963,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// Ajout d'indication GitHub pour le versionnement
+document.addEventListener("DOMContentLoaded", function() {
+  // Sélectionner toutes les sections d'infos de projet dans les modales
+  const projectInfoSections = document.querySelectorAll('.project-info');
+  
+  // Pour chaque section d'infos, ajouter l'élément GitHub
+  projectInfoSections.forEach(section => {
+    // Créer un nouvel élément de détail
+    const githubDetail = document.createElement('div');
+    githubDetail.className = 'project-detail github-detail';
+    
+    // Contenu de l'élément avec l'icône GitHub
+    githubDetail.innerHTML = `
+      <i class="fab fa-github github-icon"></i>
+      <div class="github-info">
+        <span class="github-label">Versionnement & Sauvegarde</span>
+      </div>
+    `;
+    
+    // Ajouter l'élément à la section d'informations
+    section.appendChild(githubDetail);
+  });
+});
