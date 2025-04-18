@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio - Enzo Pace</title>
+    <meta
+      name="description"
+      content="Enzo Pace's Portfolio - BTS SIO SLAM student, web developer and IT project manager specialized in JavaScript, Python and Java technologies"
+    />
+    <meta
+      name="keywords"
+      content="Enzo Pace, portfolio, BTS SIO, SLAM, web development, IT projects, technology watch"
+    />
+    <meta name="author" content="Enzo Pace" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.enzopc.com/[page-name]" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../personnage/favicion.png"
+    />
+    <link rel="stylesheet" href="../style-sheet/accueil.css" />
+    <link rel="stylesheet" href="../style-sheet/scroll-to-top.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="image-entete">
+            <img
+              src="../personnage/personnage-soleil-sans-fond/DAD42A_1-removebg-preview.png"
+              alt="Decorative illustration"
+            />
+          </div>
+          <h1>Enzo Pace - Portfolio</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="accueil-en.html">Home</a></li>
+            <li><a href="entreprise-en.html">Company</a></li>
+            <li><a href="realisations-en.html">Projects</a></li>
+            <li><a href="veille-en.html">Technology Watch</a></li>
+            <li><a href="bilan-en.html">Overview</a></li> 
+          </ul>
+        </nav>
+        <div class="theme-container">
+          <button id="toggleNightMode" class="theme-toggle">
+            <span class="icon">🌞</span>
+          </button>
+        </div>
+        <div class="contact-button-container">
+          <button
+            id="openContactModal"
+            class="contact-button"
+            aria-label="Open contact form"
+          >
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- About me -->
+        <section id="about" class="about-me">
+          <div>
+            <h2>About me</h2>
+            <p>
+              My name is <strong>Enzo Pace</strong>, a student in
+              <strong
+                >Computer Information Systems (SLAM)</strong
+              >. Passionate about software development and new
+              technologies, I'm developing skills in programming,
+              IT project management, and teamwork.
+            </p>
+
+            <!-- Resume download button -->
+            
+              href="../doc/CV_Enzo_Pace2024_fr.pdf"
+              class="btn-cv"
+              download="CV_Enzo_Pace2024.pdf"
+              id="cv-download"
+              data-i18n="home.download_cv"
+            >
+              Download my Resume
+            </a>
+          </div>
+          <img
+            src="../picture/photo2moi.jpg"
+            alt="Photo of Enzo"
+            class="profile-photo"
+          />
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline-section">
+          <ul class="timeline">
+            <li style="--accent-color: #b67332" id="bts-tl">
+              <div class="date">2023 - 2025</div>
+              <div class="title">BTS SIO SLAM</div>
+              <div class="descr">Click for more information.</div>
+            </li>
+            <li style="--accent-color: #daab3a" id="eurodislog-tl">
+              <div class="date">2024 - Present</div>
+              <div class="title">Eurodislog</div>
+              <div class="descr">Click for more information.</div>
+            </li>
+            <li style="--accent-color: #e24a68" id="remax-tl">
+              <div class="date">2023 - 2024</div>
+              <div class="title">RE/MAX France</div>
+              <div class="descr">Click for more information.</div>
+            </li>
+            <li style="--accent-color: #4cadad" id="bac-tl">
+              <div class="date">2021 - 2023</div>
+              <div class="title">STI2D Baccalaureate</div>
+              <div class="descr">Click for more information.</div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="credits">
+          
+            target="_blank"
+            href="https://www.freepik.com/free-vector/infographic-template-with-yearly-info_1252895.htm"
+            >inspired by</a
+          >
+        </div>
+
+        <!-- Technical Skills -->
+        <section id="skills">
+          <h2>Languages</h2>
+          <div class="skills-container">
+            <!-- Existing languages -->
+            <div class="skill">
+              <i class="devicon-python-plain colored"></i>
+              <p>Python</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-javascript-plain colored"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-java-plain colored"></i>
+              <p>Java</p>
+            </div>
+            <div class="skill">
+              <img
+                src="../picture/vbalogo-removebg-preview.png"
+                alt="VBA Logo"
+              />
+              <p>VBA</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-csharp-plain colored"></i>
+              <p>C#</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-php-plain colored"></i>
+              <p>PHP</p>
+            </div>
+            <div class="skill">
+              <img
+                src="../picture/jfxlogopad1-removebg-preview.png"
+                alt="JFX Logo"
+              />
+              <p>JavaFX</p>
+            </div>
+            <div class="skill">
+              <i class="devicon-typescript-plain colored"></i>
+              <p>TypeScript</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tools Used -->
+        <section id="tools">
+          <h2>Tools</h2>
+          <div class="tools-container">
+            <div class="tool">
+              <i class="devicon-vscode-plain colored"></i>
+              <p>VS Code</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-intellij-plain colored"></i>
+              <p>IntelliJ IDEA</p>
+            </div>
+            <div class="tool">
+              <img
+                src="../picture/WAMPlogo-removebg-preview.png"
+                alt="WAMP Logo"
+              />
+              <p>WAMP</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-github-original colored"></i>
+              <p>GitHub</p>
+            </div>
+            <div class="tool">
+              <img src="../picture/notionlogo.png" alt="Notion Logo" />
+              <p>Notion</p>
+            </div>
+            <div class="tool">
+              <img
+                src="../picture/vb6-removebg-preview.png"
+                alt="VB6 Logo"
+              />
+              <p>VB6</p>
+            </div>
+            <div class="tool">
+              <img
+                src="../picture/xmllogo-removebg-preview.png"
+                alt="XML Logo"
+              />
+              <p>XML</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-mysql-plain colored"></i>
+              <p>SQL</p>
+            </div>
+            <div class="tool">
+              <img
+                src="../picture/postman-removebg-preview.png"
+                alt="PostMan Logo"
+              />
+              <p>PostMan</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-docker-plain colored"></i>
+              <p>Docker</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-git-plain colored"></i>
+              <p>Git</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-figma-plain colored"></i>
+              <p>Figma</p>
+            </div>
+            <div class="tool">
+              <i class="devicon-visualstudio-plain colored"></i>
+              <p>Visual Studio</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Frameworks and libraries -->
+        <section id="frameworks">
+          <h2>Frameworks and libraries</h2>
+          <div class="skills-container">
+            <div class="skill" data-tech="react">
+              <i class="devicon-react-plain colored"></i>
+              <p>React</p>
+            </div>
+            <div class="skill" data-tech="django">
+              <i class="devicon-django-plain colored"></i>
+              <p>Django</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+        <div class="container">
+          <!-- Contact Section -->
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:enzopropace@gmail.com">enzopropace@gmail.com</a>
+            </p>
+            <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
+            <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+          </div>
+      
+          <!-- Quick Links Section -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="accueil">Home</a></li>
+              <li><a href="entreprise">Company</a></li>
+              <li><a href="realisations">Projects</a></li>
+              <li><a href="veille">Technology Watch</a></li>
+              <li><a href="bilan">Overview</a></li>
+              <li><a href="rgpd">Privacy Policy</a></li>
+              <li><a href="mentions-legales">Legal Notice</a></li>
+            </ul>
+          </div>
+      
+          <!-- Social Media Section -->
+          <div class="footer-social">
+            <h3>Social Media</h3>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/enzo-pace-15811a266/" target="_blank">
+                <img
+                  src="../picture/logo-linkedin-noir.jpg"
+                  alt="LinkedIn"
+                />
+              </a>
+              
+              <a
+              href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
+              target="_blank"
+            >
+                <img
+                  src="../picture/logo-instagram-noir-png.jpg"
+                  alt="Instagram"
+                />
+              </a>
+              <a href="https://github.com/enzopc05" target="_blank">
+                <img
+                  src="../picture/githublogo-removebg-preview.png"
+                  alt="GitHub"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="footer-bottom">
+            <p>© Enzo Pace 2024 | All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Pop-ups -->
+    <div id="modal-bts" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Details about BTS SIO SLAM</h2>
+        <p>
+          <span class="description"
+            >The BTS SIO SLAM is an IT training program dedicated to
+            software development and business solutions. It prepares
+            students to design, develop, and maintain
+            computer applications tailored to business needs.</span
+          >
+        </p>
+
+        <p class="details">
+          <span class="subheading"
+            >This two-year training offers an alternation
+            between theoretical courses and practical projects, allowing students to acquire
+            solid skills in the following areas:</span
+          >
+        </p>
+
+        <ul class="skills-list">
+          <li>
+            <strong>Programming:</strong> Python, Java, JavaScript, etc.
+          </li>
+          <li><strong>Web development:</strong> HTML, CSS, PHP, SQL.</li>
+          <li>
+            <strong>IT project management:</strong> agile methodologies,
+            V-model.
+          </li>
+          <li>
+            <strong>IT security:</strong> systems administration
+            and cybersecurity principles.
+          </li>
+        </ul>
+
+        <p class="details">
+          <span class="closing">
+            Through various projects, the BTS SLAM develops skills in
+            analysis, design, and management of software solutions,
+            thus opening numerous professional opportunities in the
+            IT field.
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-remax" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Details about RE/MAX France</h2>
+        <p>
+          Founded in <strong>1973</strong> in the United States,
+          <strong>RE/MAX</strong> (Real Estate Maximum) is now a leading
+          international real estate network, present in more than
+          <strong>110 countries</strong>. Since its arrival in France, RE/MAX has
+          established itself as a major player in the real estate sector, with an
+          approach centered on innovation and performance.
+        </p>
+
+        <h3>RE/MAX France Values</h3>
+        <p>
+          At RE/MAX France, the goal is to transform the real estate
+          experience through:
+        </p>
+        <ul>
+          <li>
+            <strong>Agent expertise:</strong> a network of
+            experienced professionals who are regularly trained to meet
+            the specific needs of each client.
+          </li>
+          <li>
+            <strong>Technological innovation:</strong> powerful tools
+            to facilitate transactions, optimize property visibility,
+            and offer personalized service.
+          </li>
+          <li>
+            <strong>Collaboration:</strong> a strong corporate culture
+            that values teamwork and partnerships.
+          </li>
+        </ul>
+
+        <h3>My Role at RE/MAX France</h3>
+        <p>
+          During my work-study program at RE/MAX France, I had the opportunity
+          to contribute to various projects as an IT project assistant,
+          including:
+        </p>
+        <ul>
+          <li>
+            <strong>IT support</strong> for network franchises.
+          </li>
+          <li>
+            <strong>XML feed management</strong>, enabling smooth
+            information exchange between platforms.
+          </li>
+          <li>
+            <strong>Analysis and bug fixing</strong> on the CRM,
+            ensuring an optimal user experience.
+          </li>
+        </ul>
+
+        <h3>A Formative Experience</h3>
+        <p>
+          This experience allowed me to develop my skills in IT project
+          management, technical problem-solving, and communication
+          with different network stakeholders. Working in an innovative
+          and dynamic environment like RE/MAX France also strengthened
+          my adaptability and ability to work as part of a team.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-eurodislog" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Details about Eurodislog</h2>
+        <p class="eurodislog-paragraph">
+          <strong>Eurodislog</strong> is a company specializing in
+          logistics and supply services. It supports its
+          clients by offering innovative solutions to optimize
+          their supply chains and improve their operational
+          efficiency. Thanks to its expertise, Eurodislog positions itself as
+          a key player in its sector.
+        </p>
+
+        <h3 class="eurodislog-subtitle">Eurodislog's Strengths</h3>
+        <p class="eurodislog-paragraph">Eurodislog stands out through:</p>
+        <ul class="eurodislog-list">
+          <li>
+            <strong>Advanced technological integration:</strong> use of
+            APIs and IT solutions to automate and optimize
+            logistics processes.
+          </li>
+          <li>
+            <strong>Business expertise:</strong> a deep
+            understanding of the specific needs of companies regarding
+            supply chain.
+          </li>
+          <li>
+            <strong>Constant innovation:</strong> tools and solutions
+            adapted to modern logistics challenges.
+          </li>
+        </ul>
+
+        <h3 class="eurodislog-subtitle">My Role at Eurodislog</h3>
+        <p class="eurodislog-paragraph">
+          As a work-study student at Eurodislog, I am mainly involved
+          in IT development projects, including:
+        </p>
+        <ul class="eurodislog-list">
+          <li>
+            <strong>API development:</strong> creating and managing
+            communication interfaces to exchange data with
+            partners and clients.
+          </li>
+          <li>
+            <strong>VB6 programming:</strong> implementing alerts and
+            automations to improve operational processes.
+          </li>
+          <li>
+            <strong>Creating Excel macros:</strong> optimizing administrative
+            tasks using VBA macros.
+          </li>
+        </ul>
+
+        <h3 class="eurodislog-subtitle">A Formative Experience</h3>
+        <p class="eurodislog-paragraph">
+          My experience at Eurodislog has allowed me to strengthen my skills
+          in software development, API programming, and technical project
+          management. Working in this dynamic environment has
+          also given me a clear vision of the challenges and opportunities
+          related to the modernization of logistics processes.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal-bac" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Details about the STI2D Baccalaureate</h2>
+        <p class="bac-paragraph">
+          The <strong>STI2D Baccalaureate</strong> (Science and Technology of Industry and Sustainable Development) is a training program that combines
+          technology, engineering sciences, and sustainable development.
+          The <strong>SIN</strong> option (Information Systems and Digital)
+          focuses on digital technologies and information
+          systems.
+        </p>
+
+        <h3 class="bac-subtitle">Strengths of the Program</h3>
+        <p class="bac-paragraph">This option trains students in:</p>
+        <ul class="bac-list">
+          <li>
+            <strong>Programming:</strong> introduction to languages such as
+            C, Arduino, and Python.
+          </li>
+          <li>
+            <strong>Embedded systems:</strong> study and implementation of
+            interconnected electronic systems.
+          </li>
+          <li>
+            <strong>Creation and management of digital projects:</strong>
+            prototype design, development of adapted digital solutions.
+          </li>
+          <li>
+            <strong>Data communication:</strong> exploration of
+            transmission protocols such as Bluetooth and Wi-Fi.
+          </li>
+        </ul>
+
+        <h3 class="bac-subtitle">Projects Completed</h3>
+        <p class="bac-paragraph">
+          During this training, I participated in several practical projects
+          that allowed me to apply theoretical concepts, including:
+        </p>
+        <ul class="bac-list">
+          <li>
+            <strong>Web page design:</strong> creating sites in HTML
+            and CSS.
+          </li>
+          <li>
+            <strong>Development of interactive systems:</strong>
+            programming and controlling devices with Arduino.
+          </li>
+          <li>
+            <strong>Solving technical problems:</strong> study and
+            optimization of electronic systems for concrete cases.
+          </li>
+        </ul>
+
+        <h3 class="bac-subtitle">A Springboard to the Future</h3>
+        <p class="bac-paragraph">
+          This training allowed me to discover and develop a passion
+          for digital technologies and engineering. It provided a solid foundation
+          for my higher education in computer science and my
+          professional projects.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal contact-modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xnnjklvn" method="POST">
+          <div class="form-group">
+            <label for="email">Your email address</label>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              placeholder="Your email address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message"
+              required
+            ></textarea>
+          </div>
+          <div class="form-consent">
+            <input
+              type="checkbox"
+              id="consent-checkbox"
+              name="consent"
+              required
+            />
+            <label for="consent-checkbox"
+              >I have read and accept the
+              <a href="rgpd" target="_blank">privacy policy</a
+              >.</label
+            >
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New message from the portfolio"
+          />
+          <button type="submit" class="submit-button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="../dev-sheet/scroll-to-top.js"></script>
+    <script src="../dev-sheet/accueil.js"></script>
+    <script src="../dev-sheet/image-optimization.js"></script>
+  </body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Overview - Enzo Pace</title>
+    <meta
+      name="description"
+      content="Overview of my journey and skills acquired during the BTS SIO SLAM program - Enzo Pace's Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="Enzo Pace, portfolio, BTS SIO, SLAM, skills, overview, web development"
+    />
+    <meta name="author" content="Enzo Pace" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.enzopc.com/bilan" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../personnage/favicion.png"
+    />
+    <link rel="stylesheet" href="../style-sheet/bilan.css" />
+    <link rel="stylesheet" href="../style-sheet/bilan-enhanced.css" />
+    <link rel="stylesheet" href="../style-sheet/scroll-to-top.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="image-entete">
+            <img alt="Decorative illustration" />
+          </div>
+          <h1>Enzo Pace - Portfolio</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="accueil-en.html">Home</a></li>
+            <li><a href="entreprise-en.html">Company</a></li>
+            <li><a href="realisations-en.html">Projects</a></li>
+            <li><a href="veille-en.html">Technology Watch</a></li>
+            <li><a href="bilan-en.html">Overview</a></li>
+          </ul>
+        </nav>
+        <div class="theme-container">
+          <button id="toggleNightMode" class="theme-toggle">
+            <span class="icon">🌞</span>
+          </button>
+        </div>
+        <div class="contact-button-container">
+          <button
+            id="openContactModal"
+            class="contact-button"
+            aria-label="Open contact form"
+          >
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <!-- Section 1: Introduction -->
+        <section id="introduction" class="animate-on-scroll">
+          <h2>Introduction</h2>
+          <p>
+            In this section, I will present a global summary of my
+            journey, explaining the skills I've developed, the
+            projects I've worked on, and how this training has
+            contributed to my personal and professional development.
+          </p>
+        </section>
+
+        <!-- Explanatory note on skills representation -->
+        <section id="skills-note" class="note-section animate-on-scroll">
+          <div class="note-container">
+            <h3><i class="fas fa-info-circle"></i> Important note on skills representation</h3>
+            <p>
+              On this page, skill levels are represented through charts, stars, and visual indicators that show my <strong>personal evolution</strong> across three distinct periods: before BTS, first year, and second year of BTS.
+            </p>
+            <p>
+              These indicators measure my <strong>relative progress</strong> and not absolute expertise in the presented fields. For example, if you see 5 stars or an "Advanced" level in SQL, it means that I have made significant progress compared to my initial level, but does not mean that I consider myself an absolute expert in this technology.
+            </p>
+            <p>
+              The objective is to visualize my learning journey and the progressive acquisition of skills during my training, rather than positioning myself on a professional expertise scale.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2: Skills evolution timeline -->
+        <section id="skills-evolution" class="animate-on-scroll">
+          <h2>Evolution of my skills</h2>
+          <div class="timeline-controls">
+            <button class="timeline-btn active" data-period="before">
+              Before BTS
+            </button>
+            <button class="timeline-btn" data-period="first-year">
+              First year
+            </button>
+            <button class="timeline-btn" data-period="second-year">
+              Second year
+            </button>
+          </div>
+          <div class="timeline-container">
+            <div class="timeline-period active" id="before">
+              <h3>Before BTS SIO</h3>
+              <div class="skills-wrapper">
+                <!-- Will be filled dynamically -->
+              </div>
+            </div>
+            <div class="timeline-period" id="first-year">
+              <h3>First year of BTS SIO</h3>
+              <div class="skills-wrapper">
+                <!-- Will be filled dynamically -->
+              </div>
+            </div>
+            <div class="timeline-period" id="second-year">
+              <h3>Second year of BTS SIO</h3>
+              <div class="skills-wrapper">
+                <!-- Will be filled dynamically -->
+              </div>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-point" data-period="before">
+                <span class="point-label">Before BTS</span>
+              </div>
+              <div class="progress-point" data-period="first-year">
+                <span class="point-label">1st year</span>
+              </div>
+              <div class="progress-point" data-period="second-year">
+                <span class="point-label">2nd year</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Skills charts -->
+        <section id="skills-charts" class="animate-on-scroll">
+          <h2>Analysis of acquired skills</h2>
+          <div class="charts-tabs">
+            <button class="chart-tab active" data-chart="radar">
+              Overview
+            </button>
+            <button class="chart-tab" data-chart="bars">Progression</button>
+            <button class="chart-tab" data-chart="categories">
+              By category
+            </button>
+          </div>
+          <div class="charts-container">
+            <div class="chart-wrapper active" id="radar-chart-container">
+              <canvas id="skills-radar"></canvas>
+            </div>
+            <div class="chart-wrapper" id="bars-chart-container">
+              <canvas id="skills-bars"></canvas>
+            </div>
+            <div class="chart-wrapper" id="categories-chart-container">
+              <canvas id="skills-categories"></canvas>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <div class="legend-item before">
+              <span class="legend-color"></span> Before BTS
+            </div>
+            <div class="legend-item first-year">
+              <span class="legend-color"></span> First year
+            </div>
+            <div class="legend-item second-year">
+              <span class="legend-color"></span> Second year
+            </div>
+          </div>
+          <!-- Explanatory note under the legend -->
+          <div class="legend-note">
+            <p>Note: These charts represent <strong>my progressive evolution</strong> in each area and not my absolute expertise level.</p>
+          </div>
+        </section>
+
+        <!-- Section 4: Analysis of completed projects -->
+        <section id="projets" class="animate-on-scroll">
+          <h2>Analysis of Completed Projects</h2>
+          <p>
+            In this section, I analyze the main projects that I've
+            completed during my training:
+          </p>
+          <div class="projects-container">
+            <div class="project-card animate-on-scroll">
+              <div class="project-header">
+                <h3>Les4Fantastiques</h3>
+                <span class="project-period">Second year</span>
+              </div>
+              <div class="project-content">
+                <p>Marvel API requests to obtain visual results</p>
+                <div class="skills-used">
+                  <span class="skill-tag">HTML/CSS</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">API</span>
+                </div>
+                <div class="project-learnings">
+                  <h4>Skills developed</h4>
+                  <ul>
+                    <li>External API integration</li>
+                    <li>Teamwork</li>
+                    <li>Visual data presentation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card animate-on-scroll">
+              <div class="project-header">
+                <h3>GhostTrack</h3>
+                <span class="project-period">Second year</span>
+              </div>
+              <div class="project-content">
+                <p>Ticketing software with a train theme</p>
+                <div class="skills-used">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">JavaFX</span>
+                  <span class="skill-tag">Database</span>
+                </div>
+                <div class="project-learnings">
+                  <h4>Skills developed</h4>
+                  <ul>
+                    <li>Object-oriented programming</li>
+                    <li>JavaFX graphical interface</li>
+                    <li>Database management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card animate-on-scroll">
+              <div class="project-header">
+                <h3>API POM SAG</h3>
+                <span class="project-period">Second year</span>
+              </div>
+              <div class="project-content">
+                <p>Development of an API in ASP.NET Core for Eurodislog</p>
+                <div class="skills-used">
+                  <span class="skill-tag">C#</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">REST API</span>
+                </div>
+                <div class="project-learnings">
+                  <h4>Skills developed</h4>
+                  <ul>
+                    <li>REST API design</li>
+                    <li>Database management</li>
+                    <li>API key authentication</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Training experience feedback -->
+        <section id="experience" class="animate-on-scroll">
+          <h2>Training Experience Feedback</h2>
+          <p>
+            Here I discuss my overall experience of the training: the
+            aspects I most appreciated, the challenges I overcame, and
+            how it has prepared me for the next steps in my career.
+          </p>
+
+          <div class="experience-blocks">
+            <div class="experience-block animate-on-scroll">
+              <div class="icon-container">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Strengths</h3>
+              <ul>
+                <li>Practical learning through concrete projects</li>
+                <li>Diversity of technologies covered</li>
+                <li>Balance between theory and practice</li>
+                <li>Teamwork on collaborative projects</li>
+              </ul>
+            </div>
+
+            <div class="experience-block animate-on-scroll">
+              <div class="icon-container">
+                <i class="fas fa-mountain"></i>
+              </div>
+              <h3>Challenges faced</h3>
+              <ul>
+                <li>Adapting to new technologies</li>
+                <li>Time management between courses and projects</li>
+                <li>Learning advanced programming concepts</li>
+                <li>Working under pressure during exam periods</li>
+              </ul>
+            </div>
+
+            <div class="experience-block animate-on-scroll">
+              <div class="icon-container">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Lessons learned</h3>
+              <ul>
+                <li>Importance of technology watch</li>
+                <li>Value of teamwork and communication</li>
+                <li>Need for rigorous organization</li>
+                <li>Adaptability to new technologies</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Future perspectives -->
+        <section id="avenir" class="animate-on-scroll">
+          <h2>Future Perspectives</h2>
+          <p>
+            I present my professional goals for the future, how I
+            plan to continue developing my skills, and in which field
+            I wish to thrive after completing this training.
+          </p>
+
+          <div class="future-roadmap">
+            <div class="roadmap-step animate-on-scroll">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Short term (0-1 year)</h3>
+                <p>
+                  Obtaining the BTS SIO SLAM and continuing with a Bachelor's degree at Sup de Vinci to complete my training with a Bachelor's in computer science, while improving my skills in modern web technologies (React, Node.js).
+                </p>
+              </div>
+            </div>
+          
+            <div class="roadmap-step animate-on-scroll">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Medium term (1-3 years)</h3>
+                <p>
+                  Pursuing a Master's degree at Sup de Vinci over 2 years, specializing either in advanced development or IT project management depending on opportunities and my preferences, while gaining professional experience through work-study programs.
+                </p>
+              </div>
+            </div>
+          
+            <div class="roadmap-step animate-on-scroll">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Long term (3-5 years)</h3>
+                <p>
+                  Evolving towards an IT project manager or senior developer position after obtaining my Master's degree, with the possibility of specializing further in cutting-edge technologies or technical management of innovative projects.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="learning-goals animate-on-scroll">
+            <h3>Learning objectives</h3>
+            <div class="goals-container">
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fab fa-react"></i></div>
+                <div class="goal-text">React.js</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fab fa-node-js"></i></div>
+                <div class="goal-text">Node.js</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fab fa-docker"></i></div>
+                <div class="goal-text">Docker</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="goal-text">React Native</div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-icon"><i class="fas fa-database"></i></div>
+                <div class="goal-text">NoSQL</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+        <div class="container">
+          <!-- Contact Section -->
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:enzopropace@gmail.com">enzopropace@gmail.com</a>
+            </p>
+            <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
+            <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+          </div>
+      
+          <!-- Quick Links Section -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="accueil-en.html">Home</a></li>
+              <li><a href="entreprise-en.html">Company</a></li>
+              <li><a href="realisations-en.html">Projects</a></li>
+              <li><a href="veille-en.html">Technology Watch</a></li>
+              <li><a href="bilan-en.html">Overview</a></li>
+              <li><a href="rgpd-en.html">Privacy Policy</a></li>
+              <li><a href="mentions-legales-en.html">Legal Notice</a></li>
+            </ul>
+          </div>
+      
+          <!-- Social Media Section -->
+          <div class="footer-social">
+            <h3>Social Media</h3>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/enzo-pace-15811a266/" target="_blank">
+                <img
+                  src="../picture/logo-linkedin-noir.jpg"
+                  alt="LinkedIn"
+                />
+              </a>
+              
+              <a
+              href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
+              target="_blank"
+            >
+                <img
+                  src="../picture/logo-instagram-noir-png.jpg"
+                  alt="Instagram"
+                />
+              </a>
+              <a href="https://github.com/enzopc05" target="_blank">
+                <img
+                  src="../picture/githublogo-removebg-preview.png"
+                  alt="GitHub"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="footer-bottom">
+            <p>© Enzo Pace 2024 | All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal contact-modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact me</h2>
+        <form action="https://formspree.io/f/xnnjklvn" method="POST">
+          <div class="form-group">
+            <label for="email">Your email address</label>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              placeholder="Your email address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message"
+              required
+            ></textarea>
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New message from the portfolio"
+          />
+          <button type="submit" class="submit-button">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../dev-sheet/scroll-to-top.js"></script>
+    <script src="../dev-sheet/bilan.js"></script>
+    <script src="../dev-sheet/skills-data.js"></script>
+    <script src="../dev-sheet/skills-timeline.js"></script>
+    <script src="../dev-sheet/skills-charts.js"></script>
+    <script src="../dev-sheet/bilan-animations.js"></script>
+  </body>
+</html>
